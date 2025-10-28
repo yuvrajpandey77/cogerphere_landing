@@ -29,17 +29,17 @@ export const LandingHeader = () => {
         : "bg-white"
     )}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-3 h-20 items-center">
+        <div className="grid grid-cols-[1fr_auto] md:grid-cols-3 h-20 items-center gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-1 group">
+          <Link href="/" className="flex items-center space-x-1 group shrink-0 min-w-0">
             <Image
               src="/cogerpherelogoonly.png"
               alt="Cogerphere AI Labs"
               width={50}
               height={50}
-              className="rounded-full group-hover:opacity-80 transition-opacity"
+              className="rounded-full group-hover:opacity-80 transition-opacity shrink-0"
             />
-            <span className="text-2xl font-bold text-gray-900">COGERPHERE</span>
+            <span className="text-xl md:text-2xl font-bold text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">COGERPHERE</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
