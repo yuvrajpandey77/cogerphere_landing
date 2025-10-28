@@ -110,8 +110,6 @@ export default function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      onFocus={() => setFocusedField('email')}
-                      onBlur={() => setFocusedField(null)}
                       required
                       className="w-full px-4 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-black focus:bg-white transition-all duration-200 outline-none text-gray-900 placeholder:text-gray-400"
                       placeholder="john@example.com"
@@ -132,8 +130,6 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      onFocus={() => setFocusedField('subject')}
-                      onBlur={() => setFocusedField(null)}
                       className="w-full px-4 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-black focus:bg-white transition-all duration-200 outline-none text-gray-900 placeholder:text-gray-400"
                       placeholder="What's this about?"
                     />
@@ -152,8 +148,6 @@ export default function ContactPage() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      onFocus={() => setFocusedField('message')}
-                      onBlur={() => setFocusedField(null)}
                       required
                       rows={6}
                       className="w-full px-4 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-black focus:bg-white transition-all duration-200 outline-none resize-none text-gray-900 placeholder:text-gray-400"
