@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { JsonLd } from "@/components/seo/json-ld";
 
@@ -106,6 +107,7 @@ export default function RootLayout({
       >
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );
