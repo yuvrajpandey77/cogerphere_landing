@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cogerphere | AI Research Lab & Intelligent Systems – Web3 & AI",
+    title: "Cogerphere | AI Research Lab & Intelligent Systems – Web3 & AI | Cogerphere",
     description:
       "Cogerphere is an AI research lab building intelligent systems and Web3 applications. AI research, AI safety, and human-aligned innovation.",
     images: [OG_IMAGE],
