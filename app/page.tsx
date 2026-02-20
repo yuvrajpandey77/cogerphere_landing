@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { ChevronRight, Shield, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -105,7 +103,7 @@ export default function HomePage() {
                 </p>
                 <Button 
                   asChild 
-                  className="bg-white text-black hover:bg-black/90 hover:text-white rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 font-bold border- border-white text-base px-8 py-3.5"
+                  className="bg-white text-black hover:bg-black/90 hover:text-white rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 font-bold border border-white text-base px-8 py-3.5"
                 >
                   <Link href="https://cogy01.vercel.app/" className="flex items-center gap-2">
                     Try Clox <ChevronRight className="h-5 w-5" />
@@ -158,7 +156,7 @@ export default function HomePage() {
               Our Core Principles
             </h2>
             <p className="text-lg md:text-2xl text-black max-w-4xl leading-relaxed">
-              Intelligence in Motion. Knowledge in a Sphere. Cogerphere builds intelligent systems and tools that push the boundaries of how AI integrates into everyday technology. From research to real-world applications, we expand the sphere of knowledge through innovation, transparency, and human-centered design.
+              Intelligence in Motion. Knowledge in a Sphere. As an AI research lab, Cogerphere builds intelligent systems and tools that push the boundaries of how AI integrates into everyday technology. From AI research to real-world applications, we expand the sphere of knowledge through innovation, transparency, and human-centered design.
             </p>
           </div>
 
