@@ -181,7 +181,7 @@ export default function HomePage() {
                     Generate production-ready smart contracts with AI
                   </h2>
                   <p className="text-xl text-stone-600 mb-8 leading-relaxed">
-                    Clox turns natural language into production-ready smart contracts. Failproof architecture, built-in security scanning, and multi-chain deployment — so you ship with confidence.
+                    Clox turns natural language into production-ready smart contracts. Failproof architecture, built-in security scanning, and multi-chain deployment so you ship with confidence.
                   </p>
                   <Button
                     asChild
