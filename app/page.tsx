@@ -25,7 +25,7 @@ export default function HomePage() {
               Where intelligence moves and knowledge gathers
             </h1>
             <p className="text-xl md:text-2xl text-stone-600 max-w-2xl leading-relaxed">
-              We expand the sphere of what systems can understand and uphold. From context-aware LLMs to secure smart contracts — we build systems that stay coherent, transparent, and human-aligned.
+              We expand the sphere of what systems can understand and uphold. From context-aware LLMs to secure smart contracts we build systems that stay coherent, transparent, and human-aligned.
             </p>
           </section>
 
