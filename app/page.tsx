@@ -98,7 +98,7 @@ export default function HomePage() {
               <Link href="https://cogy01.vercel.app/" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
                 <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">Product</span>
                 <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
-                  Clox — Smart Contract Builder
+                  Clox - Smart Contract Builder
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
                   Generate production-ready smart contracts from natural language.
