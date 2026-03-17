@@ -8,21 +8,28 @@ const organizationSchema = {
   url: BASE_URL,
   logo: `${BASE_URL}/cogerpherelogoonly.png`,
   description:
-    "Cogerphere is an AI research lab building intelligent systems and next-generation Web3 applications. We advance AI research, AI safety, and human-aligned innovation.",
-  foundingDate: "2024",
-  sameAs: [],
+    "Intelligence in Motion. Knowledge in a Sphere. Cogerphere is an AI research lab that expands what systems can understand and uphold — from context-aware LLMs to secure smart contracts.",
+  foundingDate: "2025",
+  email: "cogerphereailabs@gmail.com",
+  sameAs: [
+    "https://www.linkedin.com/company/cogerphere",
+    "https://x.com/cogerphere",
+    "https://github.com/COGERPHEREAILABS",
+  ],
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Cogerphere",
+  alternateName: "Cogerphere AI Labs",
   url: BASE_URL,
   description:
-    "AI research lab and intelligent systems. Cogerphere builds AI and Web3 solutions with transparency, security, and human-centered design.",
+    "Where intelligence moves and knowledge gathers. Cogerphere builds intelligent systems that stay coherent, transparent, and human-aligned.",
   publisher: {
     "@type": "Organization",
     name: "Cogerphere",
+    url: BASE_URL,
     logo: `${BASE_URL}/cogerpherelogoonly.png`,
   },
   inLanguage: "en",

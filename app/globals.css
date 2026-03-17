@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0 0 0);
+  --background: oklch(0.985 0.002 85);
+  --foreground: oklch(0.13 0.01 50);
+  --accent: oklch(0.55 0.12 175);
   --card: oklch(0.9800 0 0);
   --card-foreground: oklch(0 0 0);
   --popover: oklch(1 0 0);
@@ -13,7 +14,7 @@
   --secondary-foreground: oklch(0 0 0);
   --muted: oklch(0.9700 0 0);
   --muted-foreground: oklch(0.4500 0 0);
-  --accent: oklch(0.9600 0 0);
+  --accent: oklch(0.55 0.12 175);
   --accent-foreground: oklch(0 0 0);
   --destructive: oklch(0.55 0.2200 27.3250);
   --destructive-foreground: oklch(1 0 0);
@@ -25,9 +26,9 @@
   --chart-3: oklch(0.5600 0 0);
   --chart-4: oklch(0.4400 0 0);
   --chart-5: oklch(0.9200 0 0);
-  --font-sans: Geist, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: Geist Mono, monospace;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --radius: 0.5rem;
   --shadow-x: 0px;
   --shadow-y: 1px;
@@ -111,6 +112,58 @@
 body {
   letter-spacing: var(--tracking-normal);
 }
+
+/* Loading — jar of research */
+@keyframes jar-fill {
+  0%, 100% { height: 40%; opacity: 0.8; }
+  50% { height: 55%; opacity: 1; }
+}
+@keyframes float-orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(2px, -4px) scale(1.1); }
+}
+@keyframes float-orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-3px, -2px) scale(1.05); }
+}
+@keyframes float-orb-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(1px, -5px) scale(1.15); }
+}
+
+/* Loading gate — min 280ms display, 200ms fade out */
+@keyframes loading-fade-out {
+  0%, 58.33% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Neural logo loader — gathering into Cogerphere logo */
+@keyframes neural-draw-circle {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes neural-draw-arc1 {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes neural-draw-arc2 {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes neural-node-appear {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Contact page — staggered entrance */
+@keyframes contact-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.contact-animate { animation: contact-fade-up 0.5s ease-out forwards; }
+.contact-animate-delay-1 { animation-delay: 0.05s; opacity: 0; }
+.contact-animate-delay-2 { animation-delay: 0.1s; opacity: 0; }
+.contact-animate-delay-3 { animation-delay: 0.15s; opacity: 0; }
+.contact-animate-delay-4 { animation-delay: 0.2s; opacity: 0; }
+.contact-animate-delay-5 { animation-delay: 0.25s; opacity: 0; }
+.contact-animate-delay-6 { animation-delay: 0.3s; opacity: 0; }
 
 /* Respect user motion preferences for accessibility and performance */
 @media (prefers-reduced-motion: reduce) {

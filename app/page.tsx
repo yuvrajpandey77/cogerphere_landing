@@ -1,256 +1,265 @@
 import Link from "next/link";
-import { ChevronRight, Shield, Zap, Globe } from "lucide-react";
+import { ChevronRight, Shield, Zap, Globe, FlaskConical, Eye, Heart, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
 
+const CONTENT_CLASS = "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12";
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-black" style={{ fontFamily: 'var(--font-plus-jakarta), sans-serif' }}>
-      {/* Header */}
+    <div className="min-h-screen bg-stone-50 text-stone-950">
       <LandingHeader />
 
-      {/* Hero Section - Centered */}
-      <section className="py-16 md:py-32 px-6 sm:px-8 lg:px-12 bg-white relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Large gradient orb - top right */}
-          <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-40 animate-pulse"></div>
-          {/* Medium gradient orb - bottom left */}
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full blur-3xl opacity-30 animate-pulse delay-1000"></div>
-          {/* Small gradient orb - center */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-full blur-3xl opacity-20 animate-pulse delay-500"></div>
+      <main className="relative">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-amber-100 rounded-full blur-3xl opacity-50" />
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-teal-100 rounded-full blur-3xl opacity-40" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-stone-200 rounded-full blur-3xl opacity-30" />
         </div>
-        
-        <div className="mx-auto max-w-6xl relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 leading-[1.3] text-black tracking-tight">
-              Building the Future Where AI<br className="hidden sm:block" /> and Web3 Evolve Together
-          </h1>
-            <p className="text-lg md:text-xl text-black mb-12 leading-relaxed max-w-3xl mx-auto">
-              Cogerphere is a research-driven company crafting intelligent systems and next-generation Web3 applications — advancing how AI integrates with the decentralized world while ensuring innovation remains transparent, secure, and human-aligned.
-            </p>
-            
-            {/* Creative animated grid and floating elements */}
-            <div className="mt-20 relative">
-              {/* Subtle grid pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <svg width="100%" height="100" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" strokeWidth="0.5"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-              </div>
-              
-              {/* Floating animated dots */}
-              <div className="flex items-center justify-center gap-16 flex-wrap px-4 py-8">
-                <div className="relative group">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 animate-pulse shadow-lg"></div>
-                  <div className="absolute inset-0 w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 animate-ping opacity-75"></div>
-                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-black/70 whitespace-nowrap">
-                    AI Research
-                  </div>
-                </div>
-                
-                <div className="relative group">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 animate-pulse delay-300 shadow-lg"></div>
-                  <div className="absolute inset-0 w-4 h-4 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 animate-ping opacity-75 delay-300"></div>
-                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-black/70 whitespace-nowrap">
-                    Security
-                  </div>
-                </div>
-                
-                <div className="relative group">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-violet-500 to-purple-500 animate-pulse delay-700 shadow-lg"></div>
-                  <div className="absolute inset-0 w-4 h-4 rounded-full bg-gradient-to-br from-violet-500 to-purple-500 animate-ping opacity-75 delay-700"></div>
-                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-black/70 whitespace-nowrap">
-                    Web3
-                  </div>
-                </div>
-                
-                <div className="relative group">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-pulse delay-1000 shadow-lg"></div>
-                  <div className="absolute inset-0 w-4 h-4 rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 animate-ping opacity-75 delay-1000"></div>
-                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-black/70 whitespace-nowrap">
-                    Innovation
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Smart Contract Builder Section - Redesigned */}
-      <section className="py-20 px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto w-full">
-          <div className="bg-black rounded-2xl p-10 md:p-14 text-white">
-            <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div>
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-semibold text-white border border-white/20">
-                    Smart Contract Builder
+        <div className={`relative z-10 ${CONTENT_CLASS}`}>
+          {/* Hero — large, dominant */}
+          <section className="pt-20 pb-12 md:pt-28 md:pb-14">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-8 leading-[1.15] text-stone-950 tracking-tight max-w-4xl">
+              Where intelligence moves and knowledge gathers
+            </h1>
+            <p className="text-xl md:text-2xl text-stone-600 max-w-2xl leading-relaxed">
+              We expand the sphere of what systems can understand and uphold. From context-aware LLMs to secure smart contracts — we build systems that stay coherent, transparent, and human-aligned.
+            </p>
+          </section>
+
+          {/* Featured — distinct card: smaller type, left accent, clear hierarchy */}
+          <section className="pb-20 md:pb-24">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="h-px flex-1 max-w-16 bg-stone-300" aria-hidden />
+              <span className="text-xs font-semibold text-stone-500 uppercase tracking-[0.2em]">Spotlight</span>
+              <span className="h-px flex-1 bg-stone-300" aria-hidden />
+            </div>
+            <Link
+              href="/research"
+              className="block rounded-2xl overflow-hidden border-2 border-stone-200 bg-stone-900 text-white hover:border-teal-500/50 hover:bg-stone-800 transition-all duration-300 group"
+            >
+              <div className="relative flex flex-col md:flex-row">
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-teal-500 md:w-1" aria-hidden />
+                <div className="p-8 md:p-10 lg:p-12 pl-10 md:pl-11 flex-1 min-w-0">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-normal tracking-tight mb-3 max-w-2xl">
+                    Context Intelligence Framework
+                  </h2>
+                  <p className="text-base md:text-lg text-white/80 max-w-xl leading-relaxed mb-6">
+                    How can a threshold-triggered secondary agent detect context drift and selectively compress stale context — without degrading answer quality or latency?
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-teal-300 font-semibold text-sm group-hover:gap-3 transition-all">
+                    Explore research <ChevronRight className="h-4 w-4" />
                   </span>
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
-                  Generate production-ready smart contracts with AI
-                </h2>
-                <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                  Introducing the most secure and reliable smart contract generation system. Built with failproof architecture and comprehensive testing frameworks to ensure your contracts are production-ready.
-                </p>
-                <Button 
-                  asChild 
-                  className="bg-white text-black hover:bg-black/90 hover:text-white rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 font-bold border border-white text-base px-8 py-3.5"
-                >
-                  <Link href="https://cogy01.vercel.app/" className="flex items-center gap-2">
-                    Try Clox <ChevronRight className="h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-              
-              {/* Right side - Feature list */}
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Secure by Default</h3>
-                    <p className="text-white/70">Built-in security best practices and automated vulnerability scanning</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Zap className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">AI-Powered</h3>
-                    <p className="text-white/70">Generate contracts from natural language with intelligent automation</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Globe className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Multi-Chain Support</h3>
-                    <p className="text-white/70">Deploy to Ethereum, Polygon, Base, and more</p>
+                {/* Paper / DPR-style research visual */}
+                <div className="hidden md:flex items-center justify-center p-6 lg:p-8 pr-8 lg:pr-12 shrink-0">
+                  <div className="relative group-hover:scale-[1.02] transition-transform duration-300">
+                    {/* Main paper card */}
+                    <div className="relative w-36 lg:w-44 bg-stone-700/90 rounded-md border border-stone-600/50 p-3.5 shadow-2xl rotate-2 overflow-hidden">
+                      <div className="font-mono text-[9px] lg:text-[10px] text-white/90 leading-relaxed">
+                        <div className="text-teal-300 font-semibold mb-2">CIF Research</div>
+                        <div className="space-y-0.5 text-white/70">
+                          <span>drift_detect()</span>
+                          <span>threshold_gate()</span>
+                          <span className="text-teal-400">compress()</span>
+                        </div>
+                      </div>
+                      {/* Folded corner */}
+                      <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[18px] border-l-transparent border-b-[18px] border-b-stone-800/90" />
+                    </div>
+                    {/* Back paper layer */}
+                    <div className="absolute -bottom-1.5 -right-1.5 w-32 lg:w-40 h-20 lg:h-24 bg-stone-800/50 rounded-md border border-stone-600/40 -rotate-6 -z-10" />
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </Link>
+          </section>
 
-      {/* Features Section */}
-      <section className="py-28 px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto w-full">
-          <div className="mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-black tracking-tight">
-              Our Core Principles
+          {/* Latest — 3 cards */}
+          <section className="pt-20 md:pt-24 pb-20 md:pb-24">
+            <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-950 mb-8">
+              Latest from Cogerphere
             </h2>
-            <p className="text-lg md:text-2xl text-black max-w-4xl leading-relaxed">
-              Intelligence in Motion. Knowledge in a Sphere. As an AI research lab, Cogerphere builds intelligent systems and tools that push the boundaries of how AI integrates into everyday technology. From AI research to real-world applications, we expand the sphere of knowledge through innovation, transparency, and human-centered design.
-            </p>
-          </div>
-
-          {/* Three Cards - Custom Illustration Style */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {/* Card 1 - Security First */}
-            <div className="rounded-2xl p-8 bg-gradient-to-br from-orange-100 to-amber-100 transition-all duration-200 hover:shadow-lg">
-              <div className="mb-8 h-48 flex items-center justify-center">
-                {/* Custom illustration - Security shield with hand */}
-                <svg width="120" height="120" viewBox="0 0 120 120" className="text-black">
-                  <circle cx="60" cy="60" r="50" fill="#fef3c7" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M60 20 L75 45 L60 50 L45 45 Z" fill="currentColor" opacity="0.7"/>
-                  <path d="M50 55 L60 70 L70 55" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <rect x="55" y="35" width="10" height="20" rx="2" fill="currentColor" opacity="0.5"/>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-black">
-                Security First
-                <br />
-                AI Safety
-              </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/research" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
+                <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">Research</span>
+                <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
+                  Context Intelligence Framework
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Adaptive compression and drift detection for LLM context windows.
+                </p>
+                <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
+                  Read more <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
+              <Link href="https://cogy01.vercel.app/" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
+                <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">Product</span>
+                <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
+                  Clox — Smart Contract Builder
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Generate production-ready smart contracts from natural language.
+                </p>
+                <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
+                  Try Clox <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
+              <Link href="/news" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
+                <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">News</span>
+                <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
+                  Updates & announcements
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Stay informed on research, product releases, and company news.
+                </p>
+                <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
+                  View news <ChevronRight className="h-4 w-4" />
+                </span>
+              </Link>
             </div>
+          </section>
 
-            {/* Card 2 - AI Research */}
-            <div className="rounded-2xl p-8 bg-gradient-to-br from-blue-100 to-teal-100 transition-all duration-200 hover:shadow-lg">
-              <div className="mb-8 h-48 flex items-center justify-center">
-                {/* Custom illustration - AI research with blocks */}
-                <svg width="120" height="120" viewBox="0 0 120 120" className="text-black">
-                  <rect x="20" y="40" width="25" height="35" rx="3" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="47" y="30" width="25" height="45" rx="3" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="74" y="40" width="25" height="35" rx="3" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <circle cx="38" cy="25" r="8" fill="currentColor" opacity="0.6"/>
-                  <circle cx="60" cy="20" r="8" fill="currentColor" opacity="0.6"/>
-                  <circle cx="81" cy="25" r="8" fill="currentColor" opacity="0.6"/>
-                  <line x1="35" y1="50" x2="30" y2="60" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <line x1="85" y1="50" x2="90" y2="60" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
+          {/* How we work — 4 pill cards */}
+          <section className="pt-20 md:pt-24 pb-20 md:pb-24">
+            <div className="bg-white rounded-2xl border border-stone-200 px-8 md:px-12 py-12 md:py-16">
+            <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-950 mb-8">
+              How we work
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                  <FlaskConical className="h-6 w-6 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-stone-950 mb-1">Research-first</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">We start with hard problems before they scale.</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-black">
-                AI Research &
-                <br />
-                Innovation
-              </h3>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center shrink-0">
+                  <Shield className="h-6 w-6 text-amber-700" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-stone-950 mb-1">Safety by default</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Every system is designed to fail safely.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center shrink-0">
+                  <Eye className="h-6 w-6 text-stone-700" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-stone-950 mb-1">Transparent</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">We share what we learn. Open where it matters.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                  <Heart className="h-6 w-6 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-stone-950 mb-1">Human-aligned</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Innovation that serves long-term well-being.</p>
+                </div>
+              </div>
             </div>
+            </div>
+          </section>
 
-            {/* Card 3 - Web3 Integration */}
-            <div className="rounded-2xl p-8 bg-gradient-to-br from-violet-100 to-purple-100 transition-all duration-200 hover:shadow-lg">
-              <div className="mb-8 h-48 flex items-center justify-center">
-                {/* Custom illustration - Web3 network structure */}
-                <svg width="120" height="120" viewBox="0 0 120 120" className="text-black">
-                  {/* Base structure */}
-                  <rect x="40" y="60" width="40" height="15" rx="2" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="30" y="70" width="60" height="15" rx="2" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="20" y="80" width="80" height="15" rx="2" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  {/* Top structure */}
-                  <rect x="50" y="45" width="20" height="12" rx="2" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="50" y="28" width="20" height="12" rx="2" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  <rect x="50" y="11" width="20" height="12" rx="2" fill="white" stroke="currentColor" strokeWidth="2"/>
-                  {/* Connecting lines */}
-                  <circle cx="35" cy="52" r="4" fill="currentColor"/>
-                  <circle cx="60" cy="40" r="4" fill="currentColor"/>
-                  <circle cx="85" cy="52" r="4" fill="currentColor"/>
-                </svg>
+          {/* Product — Clox */}
+          <section className="pt-20 md:pt-24 pb-20 md:pb-24">
+            <div className="bg-white rounded-2xl border border-stone-200 p-10 md:p-14">
+              <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div>
+                  <span className="inline-block px-4 py-2 bg-teal-600 text-white rounded-full text-sm font-semibold mb-6">
+                    Clox
+                  </span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal mb-6 text-stone-950 tracking-tight">
+                    Generate production-ready smart contracts with AI
+                  </h2>
+                  <p className="text-xl text-stone-600 mb-8 leading-relaxed">
+                    Clox turns natural language into production-ready smart contracts. Failproof architecture, built-in security scanning, and multi-chain deployment — so you ship with confidence.
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl font-bold text-base px-8 py-3.5"
+                  >
+                    <Link href="https://cogy01.vercel.app/" className="flex items-center gap-2">
+                      Try Clox <ChevronRight className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                </div>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                      <Shield className="h-6 w-6 text-teal-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Secure by Default</h3>
+                      <p className="text-stone-600 text-sm">Built-in security best practices and automated vulnerability scanning</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                      <Zap className="h-6 w-6 text-teal-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">AI-Powered</h3>
+                      <p className="text-stone-600 text-sm">Generate contracts from natural language with intelligent automation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                      <Globe className="h-6 w-6 text-teal-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Multi-Chain Support</h3>
+                      <p className="text-stone-600 text-sm">Deploy to Ethereum, Polygon, Base, and more</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-black">
-                Web3 & Blockchain
-                <br />
-                Integration
-              </h3>
             </div>
-          </div>
+          </section>
+
+          {/* From the lab */}
+          <section className="pt-20 md:pt-24 pb-24 md:pb-32">
+            <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-950 mb-8">
+              From the lab
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="rounded-2xl border border-stone-200 bg-white p-8">
+                <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-4">
+                  <BookOpen className="h-6 w-6 text-stone-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-stone-950 mb-2">CIF SDK</h3>
+                <p className="text-stone-600 text-sm leading-relaxed mb-4">
+                  Context Intelligence Framework — CLI and IDE plugin for adaptive context compression. Coming soon.
+                </p>
+                <Link href="/research" className="text-teal-600 font-medium text-sm hover:underline">
+                  Learn more →
+                </Link>
+              </div>
+              <div className="rounded-2xl border border-stone-200 bg-white p-8">
+                <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-4">
+                  <FlaskConical className="h-6 w-6 text-stone-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-stone-950 mb-2">Ongoing research</h3>
+                <p className="text-stone-600 text-sm leading-relaxed mb-4">
+                  We're exploring alignment, interpretability, and safe deployment. More to share soon.
+                </p>
+                <Link href="/research" className="text-teal-600 font-medium text-sm hover:underline">
+                  Explore research →
+                </Link>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </main>
 
-      {/* CTA Section */}
-      <section className="py-28 md:py-40 px-6 sm:px-8 lg:px-12 bg-white">
-        <div className="mx-auto w-full max-w-4xl text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-10 text-black tracking-tight">
-            Ready to build the next
-            <br />
-            generation of Web3?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-black text-white border-2 border-black rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 font-bold text-lg px-10 py-4">
-              <Link href="https://cogy01.vercel.app/">Get Started</Link>
-            </Button>
-            <Button asChild size="lg" className="bg-white text-black border-2 border-black rounded-lg transition-all duration-200 hover:bg-black hover:text-white hover:scale-105 active:scale-95 font-bold text-lg px-10 py-4">
-              <Link href="/docs">View Documentation</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
       <LandingFooter />
     </div>
   );

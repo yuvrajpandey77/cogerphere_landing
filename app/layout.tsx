@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
-import { Sora, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Instrument_Serif, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { JsonLd } from "@/components/seo/json-ld";
+import { LoadingGate } from "@/components/loading-gate";
 
 const BASE_URL = "https://cogerphere.com";
 const OG_IMAGE = `${BASE_URL}/cogerpherelogoonly.png`;
 
-const sora = Sora({
-  variable: "--font-geist-sans",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
-  preload: true,
 });
 
 const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
   display: "swap",
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+  variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
@@ -31,22 +32,27 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "Cogerphere | AI Research Lab & Intelligent Systems – Web3 & AI",
+      "Cogerphere | AI Research Lab & Intelligent Systems",
     template: "%s | Cogerphere",
   },
   description:
-    "Cogerphere is an AI research lab building intelligent systems and Web3 applications. AI research, AI safety, smart contracts, and human-aligned innovation.",
+    "Cogerphere is an AI research lab that expands the sphere of what systems can understand and uphold. Context intelligence, secure smart contracts, and human-aligned innovation.",
   keywords: [
     "AI research",
     "AI lab",
-    "artificial intelligence",
-    "intelligent systems",
-    "Web3",
-    "smart contracts",
-    "AI safety",
-    "machine learning",
-    "blockchain",
     "Cogerphere",
+    "Cogerphere AI Labs",
+    "intelligent systems",
+    "context intelligence",
+    "CIF",
+    "Context Intelligence Framework",
+    "AI safety",
+    "smart contracts",
+    "Clox",
+    "machine learning",
+    "human-aligned AI",
+    "LLM context",
+    "AI research lab",
   ],
   authors: [{ name: "Cogerphere", url: BASE_URL }],
   creator: "Cogerphere",
@@ -61,9 +67,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Cogerphere",
-    title: "Cogerphere | AI Research Lab & Intelligent Systems – Web3 & AI",
+    title: "Cogerphere | AI Research Lab & Intelligent Systems",
     description:
-      "Cogerphere is an AI research lab building intelligent systems and Web3 applications. AI research, AI safety, and human-aligned innovation.",
+      "Where intelligence moves and knowledge gathers. Cogerphere builds intelligent systems that stay coherent, transparent, and human-aligned.",
     images: [
       {
         url: OG_IMAGE,
@@ -75,9 +81,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cogerphere | AI Research Lab & Intelligent Systems – Web3 & AI | Cogerphere",
+    site: "@cogerphere",
+    creator: "@cogerphere",
+    title: "Cogerphere | AI Research Lab & Intelligent Systems",
     description:
-      "Cogerphere is an AI research lab building intelligent systems and Web3 applications. AI research, AI safety, and human-aligned innovation.",
+      "Where intelligence moves and knowledge gathers. Context intelligence, secure smart contracts, human-aligned innovation.",
     images: [OG_IMAGE],
   },
   icons: {
@@ -103,10 +111,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sora.variable} ${jetBrainsMono.variable} ${plusJakartaSans.variable} antialiased`}
+        className={`${instrumentSerif.variable} ${jetBrainsMono.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
         <JsonLd />
-        {children}
+        <LoadingGate>{children}</LoadingGate>
         <Analytics />
       </body>
     </html>
