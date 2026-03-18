@@ -22,11 +22,11 @@ function usePrefersReducedMotion() {
 
 export function LoadingGate({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(() => pathname !== "/");
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (pathname === "/" || prefersReducedMotion) {
       setShowLoader(false);
       return;
     }

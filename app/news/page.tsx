@@ -7,10 +7,10 @@ const CONTENT_CLASS = "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12";
 
 export default function NewsPage() {
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-950">
+    <div className="min-h-screen bg-stone-50 text-stone-950 flex flex-col">
       <LandingHeader />
 
-      <main className="relative">
+      <main className="relative flex-1">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-20 right-20 w-72 h-72 bg-amber-100 rounded-full blur-3xl opacity-40" />
         </div>

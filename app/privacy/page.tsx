@@ -6,10 +6,10 @@ const CONTENT_CLASS = "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12";
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-950">
+    <div className="min-h-screen bg-stone-50 text-stone-950 flex flex-col">
       <LandingHeader />
 
-      <main className={CONTENT_CLASS}>
+      <main className={`${CONTENT_CLASS} flex-1`}>
         <section className="pt-20 pb-16 md:pt-28 md:pb-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-serif font-normal mb-8 text-stone-950">Privacy Policy</h1>

@@ -30,7 +30,7 @@ export const LandingHeader = () => {
         : "bg-stone-50"
     )}>
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 w-full">
-        <div className="grid grid-cols-[1fr_auto] md:grid-cols-3 h-20 items-center gap-4">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-1 group shrink-0 min-w-0">
             <Image
@@ -43,8 +43,9 @@ export const LandingHeader = () => {
             <span className="text-xl md:text-2xl font-bold text-stone-950 whitespace-nowrap overflow-hidden text-ellipsis">COGERPHERE</span>
           </Link>
 
-          {/* Desktop Navigation - Centered */}
-          <nav className="hidden md:flex items-center justify-center space-x-10">
+          {/* Desktop: Nav + CTA | Mobile: Menu button */}
+          <div className="flex items-center gap-6 md:gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             <Link href="/research" className="text-base text-stone-600 hover:text-stone-950 transition-colors duration-200">
               Research
             </Link>
@@ -107,14 +108,11 @@ export const LandingHeader = () => {
               Contact
             </Link>
           </nav>
-
-          {/* Desktop CTA & Mobile Menu Button */}
-          <div className="flex justify-end items-center">
             {/* Desktop CTA */}
-            <div className="hidden md:flex bg-teal-600 rounded-xl">
+            <div className="hidden md:block shrink-0">
               <Button 
                 asChild 
-                className="bg-teal-600 text-white hover:bg-teal-700 transition-all duration-200 font-bold px-8 py-3 text-lg"
+                className="bg-teal-600 text-white hover:bg-teal-700 transition-all duration-200 font-bold px-8 py-3 text-lg rounded-xl"
               >
                 <Link href="https://cogy01.vercel.app/" className="flex items-center gap-2">
                   Try Clox
@@ -122,15 +120,16 @@ export const LandingHeader = () => {
                 </Link>
               </Button>
             </div>
+          </div>
 
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-stone-200 transition-colors"
+              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
-          </div>
         </div>
 
         {/* Mobile Navigation */}
