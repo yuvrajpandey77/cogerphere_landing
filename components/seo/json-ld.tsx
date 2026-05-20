@@ -8,7 +8,7 @@ const organizationSchema = {
   url: BASE_URL,
   logo: `${BASE_URL}/cogerpherelogoonly.png`,
   description:
-    "Intelligence in Motion. Knowledge in a Sphere. Cogerphere is an AI research lab that expands what systems can understand and uphold — from context-aware LLMs to secure smart contracts.",
+    "Intelligence in Motion. Knowledge in a Sphere. Cogerphere builds Openbentt, Meridian local research AI, the Context Intelligence Framework, and Clox smart contracts.",
   foundingDate: "2025",
   email: "cogerphereailabs@gmail.com",
   sameAs: [

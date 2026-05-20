@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ChevronRight, Shield, Zap, Globe, FlaskConical, Eye, Heart, BookOpen } from "lucide-react";
+import Image from "next/image";
+import { ChevronRight, Shield, Zap, Globe, FlaskConical, Eye, Heart, BookOpen, Laptop, FileText, Cpu } from "lucide-react";
+import { OPENBENTT_URL } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -25,7 +27,7 @@ export default function HomePage() {
               Where intelligence moves and knowledge gathers
             </h1>
             <p className="text-xl md:text-2xl text-stone-600 max-w-2xl leading-relaxed">
-              We expand the sphere of what systems can understand and uphold. From context-aware LLMs to secure smart contracts we build systems that stay coherent, transparent, and human-aligned.
+              We expand the sphere of what systems can understand and uphold — from local-first research tools like Openbentt to context-aware LLMs, on-device models, and secure smart contracts.
             </p>
           </section>
 
@@ -36,45 +38,40 @@ export default function HomePage() {
               <span className="text-xs font-semibold text-stone-500 uppercase tracking-[0.2em]">Spotlight</span>
               <span className="h-px flex-1 bg-stone-300" aria-hidden />
             </div>
-            <Link
-              href="/research"
-              className="block rounded-2xl overflow-hidden border-2 border-stone-200 bg-stone-900 text-white hover:border-teal-500/50 hover:bg-stone-800 transition-all duration-300 group"
+            <a
+              href={OPENBENTT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-2xl overflow-hidden border-2 border-stone-200 bg-gradient-to-br from-teal-50 via-white to-amber-50 hover:border-teal-400/50 hover:shadow-xl transition-all duration-300 group"
             >
-              <div className="relative flex flex-col md:flex-row">
-                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-teal-500 md:w-1" aria-hidden />
+              <div className="relative flex flex-col lg:flex-row">
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-teal-600" aria-hidden />
                 <div className="p-8 md:p-10 lg:p-12 pl-10 md:pl-11 flex-1 min-w-0">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-normal tracking-tight mb-3 max-w-2xl">
-                    Context Intelligence Framework
+                  <span className="inline-block text-xs font-semibold text-teal-700 uppercase tracking-[0.2em] mb-4">
+                    Phase 1 · 2026
+                  </span>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-normal tracking-tight mb-3 max-w-2xl text-stone-950">
+                    Your research should not leave your machine.
                   </h2>
-                  <p className="text-base md:text-lg text-white/80 max-w-xl leading-relaxed mb-6">
-                    How can a threshold-triggered secondary agent detect context drift and selectively compress stale context — without degrading answer quality or latency?
+                  <p className="text-base md:text-lg text-stone-600 max-w-xl leading-relaxed mb-6">
+                    Openbentt is a local-first AI workspace for LaTeX, PDFs, benchmarking, and fine-tuned small models — built for researchers, by researchers.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-teal-300 font-semibold text-sm group-hover:gap-3 transition-all">
-                    Explore research <ChevronRight className="h-4 w-4" />
+                  <span className="inline-flex items-center gap-2 text-teal-700 font-semibold text-sm group-hover:gap-3 transition-all">
+                    Explore Openbentt <ChevronRight className="h-4 w-4" />
                   </span>
                 </div>
-                {/* Paper / DPR-style research visual */}
-                <div className="hidden md:flex items-center justify-center p-6 lg:p-8 pr-8 lg:pr-12 shrink-0">
-                  <div className="relative group-hover:scale-[1.02] transition-transform duration-300">
-                    {/* Main paper card */}
-                    <div className="relative w-36 lg:w-44 bg-stone-700/90 rounded-md border border-stone-600/50 p-3.5 shadow-2xl rotate-2 overflow-hidden">
-                      <div className="font-mono text-[9px] lg:text-[10px] text-white/90 leading-relaxed">
-                        <div className="text-teal-300 font-semibold mb-2">CIF Research</div>
-                        <div className="space-y-0.5 text-white/70">
-                          <span>drift_detect()</span>
-                          <span>threshold_gate()</span>
-                          <span className="text-teal-400">compress()</span>
-                        </div>
-                      </div>
-                      {/* Folded corner */}
-                      <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[18px] border-l-transparent border-b-[18px] border-b-stone-800/90" />
-                    </div>
-                    {/* Back paper layer */}
-                    <div className="absolute -bottom-1.5 -right-1.5 w-32 lg:w-40 h-20 lg:h-24 bg-stone-800/50 rounded-md border border-stone-600/40 -rotate-6 -z-10" />
-                  </div>
+                <div className="relative lg:w-[45%] shrink-0 p-6 lg:p-8 lg:pl-0">
+                  <Image
+                    src="/openbentt-launch.png"
+                    alt="Openbentt — local-first AI workspace for researchers"
+                    width={640}
+                    height={400}
+                    className="rounded-xl border border-stone-200/80 shadow-lg group-hover:scale-[1.01] transition-transform duration-300 w-full h-auto"
+                    priority
+                  />
                 </div>
               </div>
-            </Link>
+            </a>
           </section>
 
           {/* Latest — 3 cards */}
@@ -83,28 +80,33 @@ export default function HomePage() {
               Latest from Cogerphere
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/research" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
-                <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">Research</span>
+              <a
+                href={OPENBENTT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group"
+              >
+                <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Product · New</span>
                 <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
-                  Context Intelligence Framework
+                  Openbentt Phase 1
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
-                  Adaptive compression and drift detection for LLM context windows.
+                  Local-first workspace for LaTeX, PDFs, and on-device model benchmarks — no cloud layer required.
                 </p>
-                <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
-                  Read more <ChevronRight className="h-4 w-4" />
+                <span className="inline-flex items-center gap-1 text-teal-700 font-medium mt-4 text-sm">
+                  Get Openbentt <ChevronRight className="h-4 w-4" />
                 </span>
-              </Link>
-              <Link href="https://cogy01.vercel.app/" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
-                <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">Product</span>
+              </a>
+              <Link href="/research#meridian" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
+                <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Model · Upcoming</span>
                 <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
-                  Clox - Smart Contract Builder
+                  Meridian 0.1
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
-                  Generate production-ready smart contracts from natural language.
+                  Our local research AI for proofreading, LaTeX workflows, and research writing — runs entirely on your hardware.
                 </p>
-                <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
-                  Try Clox <ChevronRight className="h-4 w-4" />
+                <span className="inline-flex items-center gap-1 text-teal-700 font-medium mt-4 text-sm">
+                  Learn more <ChevronRight className="h-4 w-4" />
                 </span>
               </Link>
               <Link href="/news" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
@@ -113,7 +115,7 @@ export default function HomePage() {
                   Updates & announcements
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
-                  Stay informed on research, product releases, and company news.
+                  Openbentt launch, Meridian 0.1 preview, CIF research, and more from the lab.
                 </p>
                 <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
                   View news <ChevronRight className="h-4 w-4" />
@@ -169,8 +171,64 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Product — Openbentt */}
+          <section className="pt-20 md:pt-24 pb-12 md:pb-16">
+            <div className="bg-white rounded-2xl border border-stone-200 p-10 md:p-14 overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div>
+                  <span className="inline-block px-4 py-2 bg-teal-600 text-white rounded-full text-sm font-semibold mb-6">
+                    Openbentt
+                  </span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal mb-6 text-stone-950 tracking-tight">
+                    Local-first AI for serious research
+                  </h2>
+                  <p className="text-xl text-stone-600 mb-8 leading-relaxed">
+                    Write and compile LaTeX, analyze PDFs, compare 2–4 models side-by-side, and benchmark GGUF and WebGPU backends — all on your machine. No hosted accounts, no prompt retention.
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl font-bold text-base px-8 py-3.5"
+                  >
+                    <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Get Openbentt <ChevronRight className="h-5 w-5" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                      <Laptop className="h-6 w-6 text-teal-700" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Local by default</h3>
+                      <p className="text-stone-600 text-sm">Inference, history, and attachments stay on your hardware — Windows, macOS, and Linux.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                      <FileText className="h-6 w-6 text-teal-700" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">LaTeX & PDF workflows</h3>
+                      <p className="text-stone-600 text-sm">Edit, compile, and preview papers without leaving the app. Analyze attachments locally.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                      <Cpu className="h-6 w-6 text-teal-700" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Powered by Meridian</h3>
+                      <p className="text-stone-600 text-sm">Built for our upcoming Meridian 0.1 model — optimized for proofreading, LaTeX, and research writing on-device.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Product — Clox */}
-          <section className="pt-20 md:pt-24 pb-20 md:pb-24">
+          <section className="pb-20 md:pb-24">
             <div className="bg-white rounded-2xl border border-stone-200 p-10 md:p-14">
               <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div>
@@ -230,7 +288,19 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-950 mb-8">
               From the lab
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-2xl border border-stone-200 bg-white p-8">
+                <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center mb-4">
+                  <Cpu className="h-6 w-6 text-teal-700" />
+                </div>
+                <h3 className="text-xl font-semibold text-stone-950 mb-2">Meridian 0.1</h3>
+                <p className="text-stone-600 text-sm leading-relaxed mb-4">
+                  Our upcoming local research model — proofreading, LaTeX performance, and research writing without the cloud. Launching soon in Openbentt.
+                </p>
+                <Link href="/research#meridian" className="text-teal-700 font-medium text-sm hover:underline">
+                  About Meridian →
+                </Link>
+              </div>
               <div className="rounded-2xl border border-stone-200 bg-white p-8">
                 <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-4">
                   <BookOpen className="h-6 w-6 text-stone-600" />
@@ -247,9 +317,9 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-4">
                   <FlaskConical className="h-6 w-6 text-stone-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-stone-950 mb-2">Ongoing research</h3>
+                <h3 className="text-xl font-semibold text-stone-950 mb-2">Context Intelligence</h3>
                 <p className="text-stone-600 text-sm leading-relaxed mb-4">
-                  We're exploring alignment, interpretability, and safe deployment. More to share soon.
+                  Threshold-triggered drift detection and selective compression for LLM context windows.
                 </p>
                 <Link href="/research" className="text-teal-600 font-medium text-sm hover:underline">
                   Explore research →

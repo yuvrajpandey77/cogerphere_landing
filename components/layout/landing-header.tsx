@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronRight, Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { OPENBENTT_URL } from "@/lib/site-content";
 
 export const LandingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,10 +62,24 @@ export const LandingHeader = () => {
               
               {/* Products Dropdown Menu */}
               {isProductsOpen && (
-                <div className="absolute top-full pt-2 left-1/2 -translate-x-1/2 w-48 z-50">
+                <div className="absolute top-full pt-2 left-1/2 -translate-x-1/2 w-56 z-50">
                   <div className="bg-white rounded-lg shadow-lg border border-stone-200 py-2">
-                    <Link 
-                      href="https://cogy01.vercel.app/" 
+                    <Link
+                      href="https://openbentt.cogerphere.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span>
+                          Openbentt
+                          <span className="ml-1.5 text-[10px] font-semibold uppercase text-teal-600">New</span>
+                        </span>
+                        <ChevronRight className="h-4 w-4 ml-auto" />
+                      </div>
+                    </Link>
+                    <Link
+                      href="https://cogy01.vercel.app/"
                       className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors"
                     >
                       <div className="flex items-center gap-2">
@@ -109,15 +124,22 @@ export const LandingHeader = () => {
             </Link>
           </nav>
             {/* Desktop CTA */}
-            <div className="hidden md:block shrink-0">
-              <Button 
-                asChild 
-                className="bg-teal-600 text-white hover:bg-teal-700 transition-all duration-200 font-bold px-8 py-3 text-lg rounded-xl"
+            <div className="hidden md:flex items-center gap-3 shrink-0">
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-xl border-2 border-stone-300 text-stone-800 hover:bg-stone-100 font-semibold px-5 py-3"
               >
-                <Link href="https://cogy01.vercel.app/" className="flex items-center gap-2">
-                  Try Clox
+                <Link href="https://cogy01.vercel.app/">Clox</Link>
+              </Button>
+              <Button
+                asChild
+                className="bg-teal-600 text-white hover:bg-teal-700 transition-all duration-200 font-bold px-6 py-3 text-base rounded-xl"
+              >
+                <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Openbentt
                   <ArrowRight className="h-5 w-5" />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
@@ -145,8 +167,17 @@ export const LandingHeader = () => {
               </Link>
               <div className="flex flex-col">
                 <span className="text-stone-700 font-medium">Products</span>
-                <Link 
-                  href="https://cogy01.vercel.app/" 
+                <Link
+                  href="https://openbentt.cogerphere.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-600 hover:text-stone-950 transition-colors pl-4 mt-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Openbentt
+                </Link>
+                <Link
+                  href="https://cogy01.vercel.app/"
                   className="text-stone-600 hover:text-stone-950 transition-colors pl-4 mt-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -173,14 +204,22 @@ export const LandingHeader = () => {
               >
                 Contact
               </Link>
-              <Button 
-                asChild 
-                className="bg-teal-600 text-white hover:bg-teal-700 rounded-lg mt-2 font-semibold"
+              <a
+                href={OPENBENTT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-teal-600 text-white hover:bg-teal-700 rounded-lg mt-2 font-semibold px-4 py-3"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Link href="https://cogy01.vercel.app/" onClick={() => setIsMobileMenuOpen(false)}>
-                  Try Clox
-                </Link>
-              </Button>
+                Get Openbentt
+              </a>
+              <Link
+                href="https://cogy01.vercel.app/"
+                className="text-stone-600 hover:text-stone-950 transition-colors pl-4 mt-2 text-sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Try Clox
+              </Link>
             </nav>
           </div>
         )}

@@ -1,43 +1,52 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { NeuralLogoLoader } from "./neural-logo-loader";
 
 const MIN_DISPLAY_MS = 280;
 const FADE_MS = 200;
 
-function usePrefersReducedMotion() {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mq.matches);
-    const handler = () => setPrefersReducedMotion(mq.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-  return prefersReducedMotion;
+function subscribeReducedMotion(onStoreChange: () => void) {
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+  mq.addEventListener("change", onStoreChange);
+  return () => mq.removeEventListener("change", onStoreChange);
 }
 
+function getReducedMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return false;
+}
 
 export function LoadingGate({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [showLoader, setShowLoader] = useState(() => pathname !== "/");
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot
+  );
+  const skipLoader = pathname === "/" || prefersReducedMotion;
+  const [showLoader, setShowLoader] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/" || prefersReducedMotion) {
-      setShowLoader(false);
-      return;
+    if (skipLoader) {
+      const hide = requestAnimationFrame(() => setShowLoader(false));
+      return () => cancelAnimationFrame(hide);
     }
-    setShowLoader(true);
 
-    const timer = setTimeout(() => {
+    const show = requestAnimationFrame(() => setShowLoader(true));
+    const hideTimer = window.setTimeout(() => {
       setShowLoader(false);
     }, MIN_DISPLAY_MS + FADE_MS);
 
-    return () => clearTimeout(timer);
-  }, [pathname, prefersReducedMotion]);
+    return () => {
+      cancelAnimationFrame(show);
+      clearTimeout(hideTimer);
+    };
+  }, [pathname, skipLoader]);
 
   return (
     <>

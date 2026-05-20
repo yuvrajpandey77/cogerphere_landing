@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ChevronRight, Cpu, AlertTriangle, Zap, Gauge } from "lucide-react";
+import { ChevronRight, Cpu, AlertTriangle, Zap, Gauge, FileText, Shield, Sparkles, FlaskConical } from "lucide-react";
+import { OPENBENTT_URL } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -31,6 +32,65 @@ export default function ResearchPage() {
           <blockquote className="border-l-4 border-teal-600 pl-6 py-2 text-lg text-stone-600 italic">
             How can a threshold-triggered secondary agent detect context drift and selectively compress stale context to extend effective LLM context utilization — without degrading answer quality or increasing end-to-end latency beyond acceptable bounds?
           </blockquote>
+      </section>
+
+      {/* Meridian 0.1 */}
+      <section id="meridian" className="py-16 md:py-20 scroll-mt-24">
+          <span className="inline-block px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-semibold mb-6">
+            Upcoming · Local research AI
+          </span>
+          <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-stone-950">
+            Meridian 0.1
+          </h2>
+          <p className="text-lg text-stone-600 mb-12 max-w-3xl leading-relaxed">
+            Meridian 0.1 is Cogerphere&apos;s upcoming on-device language model, designed for researchers who need powerful AI without sending manuscripts, drafts, or data to the cloud. It will ship first inside{" "}
+            <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="text-teal-700 hover:underline font-medium">
+              Openbentt
+            </a>
+            .
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <FileText className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">LaTeX & writing</h3>
+                <p className="text-stone-600 text-sm">Tuned for academic workflows — structure, citations, and compile-ready output.</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <Sparkles className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">Proofreading</h3>
+                <p className="text-stone-600 text-sm">Grammar, clarity, and consistency checks that run locally on your drafts.</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <Shield className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">Private by design</h3>
+                <p className="text-stone-600 text-sm">Inference on CPU, GPU, or WebGPU — your prompts never leave the machine.</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <FlaskConical className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">Research-grade</h3>
+                <p className="text-stone-600 text-sm">Built for serious work — papers, theses, and reproducible benchmarks, not casual chat.</p>
+              </div>
+            </div>
+          </div>
+          <p className="mt-8 text-stone-600 max-w-3xl">
+            <strong className="text-stone-950">Status:</strong> Meridian 0.1 is in active development. Follow{" "}
+            <Link href="/news" className="text-teal-700 hover:underline">News</Link> for launch updates.
+          </p>
       </section>
 
       {/* The Problem */}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { OPENBENTT_URL } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -37,8 +38,37 @@ export default function AboutPage() {
             Cogerphere was founded on a simple belief: intelligence should move, and knowledge should gather. As AI systems grow in capability, they also grow in context — and that context is where coherence breaks. We build tools and research that keep the sphere intact.
           </p>
           <p className="text-lg text-stone-600 max-w-3xl leading-relaxed">
-            From context-aware compression for LLMs to failproof smart contract generation, we ship systems that think in context, scale with integrity, and stay human-aligned.
+            From Openbentt — our local-first research workspace — to Meridian 0.1, our upcoming on-device model for proofreading and LaTeX, plus context-aware compression and failproof smart contract generation, we ship systems that think in context, scale with integrity, and stay human-aligned.
           </p>
+        </div>
+      </section>
+
+      {/* Products & models */}
+      <section className="py-16 md:py-20">
+        <h2 className="text-3xl md:text-4xl font-serif font-normal mb-12 text-stone-950">
+          What we&apos;re building
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="rounded-2xl border border-stone-200 bg-white p-8">
+            <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Product · Phase 1</span>
+            <h3 className="text-2xl font-semibold text-stone-950 mt-2 mb-3">Openbentt</h3>
+            <p className="text-stone-600 leading-relaxed mb-6">
+              A local-first AI workspace for LaTeX, PDFs, benchmarking, and fine-tuned small models. Your research stays on your machine — no cloud accounts, no hidden logging.
+            </p>
+            <Link href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="text-teal-700 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+              openbentt.cogerphere.com <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="rounded-2xl border border-stone-200 bg-white p-8">
+            <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Model · Upcoming</span>
+            <h3 className="text-2xl font-semibold text-stone-950 mt-2 mb-3">Meridian 0.1</h3>
+            <p className="text-stone-600 leading-relaxed mb-6">
+              Our local research AI model — built for proofreading, LaTeX workflows, research writing, and more. Runs on your hardware inside Openbentt and beyond.
+            </p>
+            <Link href="/research#meridian" className="text-teal-700 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+              Research preview <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
