@@ -1,13 +1,11 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://cogerphere.com";
-
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Cogerphere – AI Research Lab & Intelligent Systems",
     short_name: "Cogerphere",
     description:
-      "Cogerphere is an AI research lab building intelligent systems and Web3 applications. AI research, AI safety, and human-aligned innovation.",
+      "Cogerphere builds Openbentt, Meridian local research AI, CIF, and Clox — intelligent systems that stay coherent and human-aligned.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

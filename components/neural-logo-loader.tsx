@@ -1,15 +1,26 @@
 "use client";
 
 /**
- * Animated neural network that gathers into the Cogerphere logo.
- * Nodes and arcs draw in to form the logo — "gathering knowledge".
+ * Animated Cogerphere logo — outer ring, plain arc (top-left → bottom-right),
+ * and dotted arc with nodes (bottom-left → top-right), matching cogerpherelogoonly.png.
  */
 export function NeuralLogoLoader() {
-  const circleLength = 2 * Math.PI * 42; // ~264
-  const arcLength = 140; // approximate path length for curved arcs
+  const circleLength = 2 * Math.PI * 42;
+  const plainArcLength = 155;
+  const dottedArcLength = 155;
+
+  // Ring anchor points (clock positions on r=42, center 50,50)
+  const plainStart = { x: 22, y: 22 }; // ~10 o'clock
+  const plainEnd = { x: 78, y: 78 }; // ~4 o'clock
+  const dotStart = { x: 29, y: 86 }; // ~7 o'clock — node on ring
+  const dotEnd = { x: 71, y: 14 }; // ~2 o'clock — node on ring
 
   return (
-    <div className="min-h-screen bg-stone-50 flex items-center justify-center fixed inset-0 z-50" role="status" aria-label="Loading">
+    <div
+      className="min-h-screen bg-stone-50 flex items-center justify-center fixed inset-0 z-50"
+      role="status"
+      aria-label="Loading"
+    >
       <div className="flex flex-col items-center gap-8">
         <div className="w-28 h-28">
           <svg
@@ -21,7 +32,6 @@ export function NeuralLogoLoader() {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            {/* Outer circle — forms last, "sphere" boundary */}
             <circle
               cx="50"
               cy="50"
@@ -33,50 +43,48 @@ export function NeuralLogoLoader() {
                 animation: "neural-draw-circle 0.12s ease-out 0.18s forwards",
               }}
             />
-            {/* Arc 1: top-left → bottom-right (curved through center) */}
+            {/* Plain arc: top-left → bottom-right (no nodes) */}
             <path
-              d="M 28 28 C 50 8 95 50 72 72"
+              d={`M ${plainStart.x} ${plainStart.y} C 50 6 94 50 ${plainEnd.x} ${plainEnd.y}`}
               className="text-stone-900"
               style={{
-                strokeDasharray: arcLength,
-                strokeDashoffset: arcLength,
-                animation: "neural-draw-arc1 0.1s ease-out 0.02s forwards",
+                strokeDasharray: plainArcLength,
+                strokeDashoffset: plainArcLength,
+                animation: "neural-draw-arc1 0.1s ease-out 0.06s forwards",
               }}
             />
-            {/* Arc 2: top-right → bottom-left (curved through center) */}
+            {/* Dotted arc: bottom-left → top-right (nodes at endpoints on ring) */}
             <path
-              d="M 72 28 C 95 50 50 92 28 72"
+              d={`M ${dotStart.x} ${dotStart.y} C 10 58 58 10 ${dotEnd.x} ${dotEnd.y}`}
               className="text-stone-900"
               style={{
-                strokeDasharray: arcLength,
-                strokeDashoffset: arcLength,
-                animation: "neural-draw-arc2 0.1s ease-out 0.06s forwards",
+                strokeDasharray: dottedArcLength,
+                strokeDashoffset: dottedArcLength,
+                animation: "neural-draw-arc2 0.1s ease-out 0.02s forwards",
               }}
             />
-            {/* Node 1: upper-right quadrant */}
             <circle
-              cx="68"
-              cy="32"
+              cx={dotStart.x}
+              cy={dotStart.y}
               r="5"
               fill="currentColor"
               className="text-stone-900"
               style={{
                 opacity: 0,
                 transformOrigin: "center",
-                animation: "neural-node-appear 0.08s ease-out 0s forwards",
+                animation: "neural-node-appear 0.08s ease-out 0.1s forwards",
               }}
             />
-            {/* Node 2: lower-left quadrant */}
             <circle
-              cx="32"
-              cy="68"
+              cx={dotEnd.x}
+              cy={dotEnd.y}
               r="5"
               fill="currentColor"
               className="text-stone-900"
               style={{
                 opacity: 0,
                 transformOrigin: "center",
-                animation: "neural-node-appear 0.08s ease-out 0.04s forwards",
+                animation: "neural-node-appear 0.08s ease-out 0.14s forwards",
               }}
             />
           </svg>

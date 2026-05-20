@@ -5,7 +5,7 @@ const BASE_URL = "https://cogerphere.com";
 export const metadata: Metadata = {
   title: "News",
   description:
-    "Cogerphere news and updates. Announcements, research releases, and product news.",
+    "Cogerphere news: Openbentt Phase 1, Meridian 0.1 preview, CIF research, and product announcements.",
   openGraph: {
     title: "News | Cogerphere AI Labs",
     url: `${BASE_URL}/news`,

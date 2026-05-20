@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ChevronRight, BookOpen, Code, Wrench } from "lucide-react";
+import { ChevronRight, BookOpen, Code, Wrench, Laptop, Cpu } from "lucide-react";
+import { OPENBENTT_URL } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -23,7 +24,7 @@ export default function DocsPage() {
             Documentation
           </h1>
           <p className="text-xl md:text-2xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            Build intelligent systems with Cogerphere. From AI-powered smart contracts to context-aware LLMs — everything you need to expand the sphere.
+            Build intelligent systems with Cogerphere. Openbentt for local research, Meridian for on-device writing, Clox for smart contracts, and CIF for context-aware LLMs.
           </p>
       </section>
 
@@ -36,8 +37,8 @@ export default function DocsPage() {
             <li className="flex gap-4 items-start">
               <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">1</span>
               <div>
-                <h3 className="font-semibold text-stone-950">Sign up and explore</h3>
-                <p className="text-stone-600">Create an account and get familiar with the interface.</p>
+                <h3 className="font-semibold text-stone-950">Get Openbentt</h3>
+                <p className="text-stone-600">Download the local-first research workspace for LaTeX, PDFs, and on-device AI.</p>
               </div>
             </li>
             <li className="flex gap-4 items-start">
@@ -50,8 +51,8 @@ export default function DocsPage() {
             <li className="flex gap-4 items-start">
               <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">3</span>
               <div>
-                <h3 className="font-semibold text-stone-950">Integrate</h3>
-                <p className="text-stone-600">Connect to your workflow via API or CLI when ready.</p>
+                <h3 className="font-semibold text-stone-950">Explore research</h3>
+                <p className="text-stone-600">Read about Meridian 0.1, CIF, and what we&apos;re building next.</p>
               </div>
             </li>
           </ol>
@@ -62,7 +63,39 @@ export default function DocsPage() {
           <h2 className="text-3xl md:text-4xl font-serif font-normal mb-12 text-stone-950">
             Products & Tools
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Openbentt */}
+            <div className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all">
+              <div className="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center mb-6">
+                <Laptop className="h-7 w-7 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-stone-950 mb-2">Openbentt</h3>
+              <p className="text-stone-600 mb-6">
+                Local-first AI workspace for LaTeX, PDFs, benchmarking, and fine-tuned small models. Phase 1 is live for Windows, macOS, and Linux.
+              </p>
+              <Button asChild className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl">
+                <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Get Openbentt <ChevronRight className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+
+            {/* Meridian */}
+            <div className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all">
+              <div className="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center mb-6">
+                <Cpu className="h-7 w-7 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-stone-950 mb-2">Meridian 0.1</h3>
+              <p className="text-stone-600 mb-6">
+                Upcoming local research model for proofreading, LaTeX, and research writing — optimized for Openbentt and private on-device use.
+              </p>
+              <Button asChild variant="outline" className="rounded-xl border-2 border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white">
+                <Link href="/research#meridian" className="flex items-center gap-2">
+                  Learn more <ChevronRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
             {/* Clox */}
             <div className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all">
               <div className="w-14 h-14 rounded-xl bg-stone-900 flex items-center justify-center mb-6">

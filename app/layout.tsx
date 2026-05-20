@@ -36,12 +36,17 @@ export const metadata: Metadata = {
     template: "%s | Cogerphere",
   },
   description:
-    "Cogerphere is an AI research lab that expands the sphere of what systems can understand and uphold. Context intelligence, secure smart contracts, and human-aligned innovation.",
+    "Cogerphere is an AI research lab building Openbentt (local-first research workspace), Meridian 0.1 (on-device research AI), context intelligence, and secure smart contracts.",
   keywords: [
     "AI research",
     "AI lab",
     "Cogerphere",
     "Cogerphere AI Labs",
+    "Openbentt",
+    "Meridian",
+    "local-first AI",
+    "LaTeX AI",
+    "research AI",
     "intelligent systems",
     "context intelligence",
     "CIF",

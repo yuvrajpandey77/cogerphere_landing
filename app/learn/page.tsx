@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ChevronRight, BookOpen, Code, Lightbulb } from "lucide-react";
+import { ChevronRight, BookOpen, Code, Lightbulb, Laptop } from "lucide-react";
+import { OPENBENTT_URL } from "@/lib/site-content";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
 
@@ -28,7 +29,25 @@ export default function LearnPage() {
 
       {/* Cards */}
       <section className="py-16 md:py-20">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a
+              href={OPENBENTT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all group"
+            >
+              <div className="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center mb-6 group-hover:bg-teal-200 transition-colors">
+                <Laptop className="h-7 w-7 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-semibold text-stone-950 mb-2">Openbentt</h3>
+              <p className="text-stone-600 mb-4">
+                Local-first workspace for LaTeX, PDFs, and on-device model benchmarks. Your research stays on your machine.
+              </p>
+              <span className="text-teal-700 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Get Openbentt <ChevronRight className="h-4 w-4" />
+              </span>
+            </a>
+
             <Link
               href="/docs"
               className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all group"
@@ -38,7 +57,7 @@ export default function LearnPage() {
               </div>
               <h3 className="text-xl font-semibold text-stone-950 mb-2">Documentation</h3>
               <p className="text-stone-600 mb-4">
-                Get started with Clox, CIF SDK, and our tools. Quick start guides and API references.
+                Get started with Openbentt, Clox, Meridian, and CIF SDK. Quick start guides and references.
               </p>
               <span className="text-teal-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 View docs <ChevronRight className="h-4 w-4" />
