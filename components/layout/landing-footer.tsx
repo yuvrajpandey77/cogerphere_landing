@@ -62,6 +62,17 @@ export const LandingFooter = () => {
             <h3 className="font-semibold mb-4 text-stone-300">Products</h3>
             <ul className="space-y-3 text-stone-400">
               <li>
+                <a
+                  href="https://openbentt.cogerphere.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">Openbentt</span>
+                  <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
                 <Link href="https://cogy01.vercel.app/" className="hover:text-white transition-colors duration-200 flex items-center group">
                   <span className="group-hover:translate-x-1 transition-transform duration-200">Clox</span>
                   <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />

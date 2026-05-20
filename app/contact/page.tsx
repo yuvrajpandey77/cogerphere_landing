@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { LandingHeader } from '@/components/layout/landing-header';
 import { LandingFooter } from '@/components/layout/landing-footer';
 import {
-  Send, CheckCircle2, AlertCircle, Mail, MessageSquare, User, FileText,
+  Send, CheckCircle2, AlertCircle,
   Briefcase, Building2, FlaskConical, Handshake, Newspaper, Shield, HelpCircle
 } from 'lucide-react';
+import { OPENBENTT_URL } from '@/lib/site-content';
 import { cn } from '@/lib/utils';
 
 const CONTACT_EMAIL = "cogerphereailabs@gmail.com";
@@ -95,7 +96,7 @@ export default function ContactPage() {
       } else {
         setResult({ type: 'error', message: 'Something went wrong. Please try again or email us directly.' });
       }
-    } catch (error) {
+    } catch {
       setResult({ type: 'error', message: 'Failed to send. Please check your connection or email us directly.' });
     } finally {
       setIsSubmitting(false);
@@ -211,6 +212,11 @@ export default function ContactPage() {
             <div className="contact-animate contact-animate-delay-4">
               <p className="text-sm text-stone-500">
                 Looking for roles? <Link href="/careers" className="text-teal-600 font-medium hover:underline">View careers</Link>
+                <br />
+                Research workspace?{" "}
+                <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="text-teal-600 font-medium hover:underline">
+                  Get Openbentt
+                </a>
                 <br />
                 Need Clox? <Link href="https://cogy01.vercel.app/" className="text-teal-600 font-medium hover:underline">Try Clox</Link>
               </p>
