@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
+import { PageStructuredData } from "@/components/seo/page-structured-data";
+import { pageMetadata } from "@/lib/seo";
 
-const BASE_URL = "https://cogerphere.com";
+const TITLE = "Careers";
+const DESCRIPTION = "Join Cogerphere AI Labs. Careers in AI research, engineering, and human-aligned intelligent systems.";
 
-export const metadata: Metadata = {
-  title: "Careers",
-  description: "Join Cogerphere AI Labs. We're hiring — expand the sphere with us.",
-  openGraph: {
-    title: "Careers | Cogerphere AI Labs",
-    url: `${BASE_URL}/careers`,
-  },
-  alternates: { canonical: `${BASE_URL}/careers` },
-};
+export const metadata: Metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: "/careers",
+});
 
 export default function CareersLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <PageStructuredData path="/careers" title={TITLE} description={DESCRIPTION} />
+      {children}
+    </>
+  );
 }

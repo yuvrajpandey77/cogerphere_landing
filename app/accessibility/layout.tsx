@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-
-const BASE_URL = "https://cogerphere.com";
+import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Accessibility",
-  description: "Cogerphere accessibility commitment. We aim to make our website accessible to everyone.",
+  ...pageMetadata({
+    title: "Accessibility",
+    description:
+      "Cogerphere accessibility commitment. We aim to make our website accessible to everyone.",
+    path: "/accessibility",
+  }),
   robots: { index: false, follow: true },
-  alternates: { canonical: `${BASE_URL}/accessibility` },
 };
 
 export default function AccessibilityLayout({ children }: { children: React.ReactNode }) {

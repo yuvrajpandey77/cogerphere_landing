@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
+import { PageStructuredData } from "@/components/seo/page-structured-data";
+import { pageMetadata } from "@/lib/seo";
 
-const BASE_URL = "https://cogerphere.com";
+const TITLE = "Learn";
+const DESCRIPTION =
+  "Learn with Cogerphere — tutorials and guides for Openbentt, Clox, Meridian, and intelligent systems.";
 
-export const metadata: Metadata = {
-  title: "Learn",
-  description:
-    "Learn with Cogerphere. Tutorials, guides, and use cases for building intelligent systems.",
-  openGraph: {
-    title: "Learn | Cogerphere AI Labs",
-    url: `${BASE_URL}/learn`,
-  },
-  alternates: { canonical: `${BASE_URL}/learn` },
-};
+export const metadata: Metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: "/learn",
+});
 
 export default function LearnLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <PageStructuredData path="/learn" title={TITLE} description={DESCRIPTION} />
+      {children}
+    </>
+  );
 }

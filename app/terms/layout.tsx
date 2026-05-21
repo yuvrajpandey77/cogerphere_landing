@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-
-const BASE_URL = "https://cogerphere.com";
+import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Cogerphere Terms of Service. Terms governing use of our website and products.",
+  ...pageMetadata({
+    title: "Terms of Service",
+    description: "Cogerphere Terms of Service. Terms governing use of our website and products.",
+    path: "/terms",
+  }),
   robots: { index: false, follow: true },
-  alternates: { canonical: `${BASE_URL}/terms` },
 };
 
 export default function TermsLayout({ children }: { children: React.ReactNode }) {

@@ -1,26 +1,22 @@
 import type { Metadata } from "next";
+import { PageStructuredData } from "@/components/seo/page-structured-data";
+import { pageMetadata } from "@/lib/seo";
 
-const BASE_URL = "https://cogerphere.com";
+const TITLE = "Research";
+const DESCRIPTION =
+  "Cogerphere research: Context Intelligence Framework, Meridian 0.1 local research AI, and adaptive compression for LLM context windows.";
 
-export const metadata: Metadata = {
-  title: "Research",
-  description:
-    "Cogerphere research: Context Intelligence Framework — adaptive compression, drift detection, and threshold-gated validation for LLM context windows.",
-  openGraph: {
-    title: "Research | Cogerphere AI Labs",
-    description:
-      "Context Intelligence Framework: extending what LLMs can remember without losing coherence.",
-    url: `${BASE_URL}/research`,
-  },
-  alternates: {
-    canonical: `${BASE_URL}/research`,
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: "/research",
+});
 
-export default function ResearchLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return children;
+export default function ResearchLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <PageStructuredData path="/research" title={TITLE} description={DESCRIPTION} />
+      {children}
+    </>
+  );
 }

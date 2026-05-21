@@ -4,9 +4,12 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { JsonLd } from "@/components/seo/json-ld";
 import { LoadingGate } from "@/components/loading-gate";
-
-const BASE_URL = "https://cogerphere.com";
-const OG_IMAGE = `${BASE_URL}/cogerpherelogoonly.png`;
+import {
+  DEFAULT_OG_IMAGE,
+  SITE_LEGAL_NAME,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/seo";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-serif",
@@ -29,12 +32,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
   title: {
-    default:
-      "Cogerphere | AI Research Lab & Intelligent Systems",
-    template: "%s | Cogerphere",
+    default: `${SITE_NAME} | AI Research Lab & Intelligent Systems`,
+    template: `%s | ${SITE_NAME}`,
   },
+  category: "technology",
   description:
     "Cogerphere is an AI research lab building Openbentt (local-first research workspace), Meridian 0.1 (on-device research AI), context intelligence, and secure smart contracts.",
   keywords: [
@@ -59,25 +63,31 @@ export const metadata: Metadata = {
     "LLM context",
     "AI research lab",
   ],
-  authors: [{ name: "Cogerphere", url: BASE_URL }],
-  creator: "Cogerphere",
-  publisher: "Cogerphere",
+  authors: [{ name: SITE_LEGAL_NAME, url: SITE_URL }],
+  creator: SITE_LEGAL_NAME,
+  publisher: SITE_LEGAL_NAME,
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: BASE_URL,
-    siteName: "Cogerphere",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     title: "Cogerphere | AI Research Lab & Intelligent Systems",
     description:
       "Where intelligence moves and knowledge gathers. Cogerphere builds intelligent systems that stay coherent, transparent, and human-aligned.",
     images: [
       {
-        url: OG_IMAGE,
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Cogerphere – AI Research Lab & Intelligent Systems",
@@ -91,7 +101,7 @@ export const metadata: Metadata = {
     title: "Cogerphere | AI Research Lab & Intelligent Systems",
     description:
       "Where intelligence moves and knowledge gathers. Context intelligence, secure smart contracts, human-aligned innovation.",
-    images: [OG_IMAGE],
+    images: [DEFAULT_OG_IMAGE],
   },
   icons: {
     icon: "/cogerpherelogoonly.png",
@@ -99,7 +109,7 @@ export const metadata: Metadata = {
     shortcut: "/cogerpherelogoonly.png",
   },
   alternates: {
-    canonical: BASE_URL,
+    canonical: SITE_URL,
   },
   verification: {
     // Add your verification IDs when you have them from Search Console / Bing

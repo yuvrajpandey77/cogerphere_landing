@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Home",
+  description:
+    "Cogerphere AI research lab — Openbentt local-first research workspace, Meridian 0.1 on-device AI, Context Intelligence Framework, and Clox smart contracts.",
+  path: "/",
+  openGraphTitle: "Home | Cogerphere AI Labs",
+});
 import { ChevronRight, Shield, Zap, Globe, FlaskConical, Eye, Heart, BookOpen, Laptop, FileText, Cpu } from "lucide-react";
 import { OPENBENTT_URL } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
