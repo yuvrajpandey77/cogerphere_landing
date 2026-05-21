@@ -13,7 +13,7 @@
 
 ---
 
-## Option A: Minimal Docs Hub (Recommended for Phase 1)
+## Option A: Minimal Docs Hub )
 
 **Concept:** Single landing page with clear navigation to resources.
 
