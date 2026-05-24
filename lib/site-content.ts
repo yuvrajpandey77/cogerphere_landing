@@ -15,6 +15,16 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    id: "openbentt-beta-launch",
+    date: "May 25, 2026",
+    category: "Product",
+    title: "Openbentt Beta Launch: Building the Local-First AI Research Workspace We Wish Existed",
+    excerpt:
+      "Today marks the beta launch of Openbentt — a local-first AI research workspace built for researchers, developers, and privacy-conscious professionals who need more than a chat interface.",
+    href: "/blog/openbentt-beta-launch",
+    badge: "Beta Launch",
+  },
+  {
     id: "openbentt-phase-1",
     date: "2026",
     category: "Product",
