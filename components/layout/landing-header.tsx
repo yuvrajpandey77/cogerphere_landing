@@ -109,6 +109,9 @@ export const LandingHeader = () => {
                     <Link href="/docs" className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors">
                       Documentation
                     </Link>
+                    <Link href="/blog" className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors">
+                      Blog
+                    </Link>
                   </div>
                 </div>
               )}
@@ -189,6 +192,9 @@ export const LandingHeader = () => {
               </Link>
               <Link href="/docs" className="text-stone-700 hover:text-stone-950 transition-colors pl-4" onClick={() => setIsMobileMenuOpen(false)}>
                 Documentation
+              </Link>
+              <Link href="/blog" className="text-stone-700 hover:text-stone-950 transition-colors pl-4" onClick={() => setIsMobileMenuOpen(false)}>
+                Blog
               </Link>
               <Link 
                 href="/news" 
