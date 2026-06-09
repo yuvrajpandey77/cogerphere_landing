@@ -101,12 +101,14 @@ export const people: Person[] = [
   {
     slug: "shivanshi-tripathi",
     name: "Shivanshi Tripathi",
-    roles: ["Co-founder", "AI Engineer"],
+    roles: ["Co-founder", "AI Researcher", "Backend Engineer"],
     tier: "leadership",
+    image: "/team/shivanshi-tripathi.png",
+    imageAlt: "Portrait of Shivanshi Tripathi, Co-founder of Cogerphere AI Labs",
     shortBio:
-      "Co-founder and AI engineer at Cogerphere. Builds core product systems alongside the founding team across Openbentt and the broader Cogerphere product stack.",
-    focus: "Applied AI engineering and product development",
-    isResearcher: false,
+      "Co-founder and AI researcher at Cogerphere. Builds backend microservices, AI pipelines, and core systems across Openbentt, Meridian 0.1, and Clox.",
+    focus: "Backend microservices, AI pipelines, context engineering, and local model research",
+    isResearcher: true,
     sortOrder: 2,
   },
 ];
@@ -271,7 +273,8 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
     collaborators: [
       {
         name: "Shivanshi Tripathi",
-        role: "Co-founder & AI Engineer",
+        role: "Co-founder & AI Researcher",
+        slug: "shivanshi-tripathi",
       },
     ],
     links: [
@@ -293,6 +296,194 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
       {
         label: "Resume (PDF)",
         href: "/team/yuvraj-pandey-resume.pdf",
+        external: true,
+      },
+      {
+        label: "Cogerphere Research",
+        href: "/research",
+      },
+      {
+        label: "Openbentt",
+        href: "https://openbentt.cogerphere.com/",
+        external: true,
+      },
+    ],
+  },
+  "shivanshi-tripathi": {
+    slug: "shivanshi-tripathi",
+    name: "Shivanshi Tripathi",
+    roles: ["Co-founder", "AI Researcher", "Backend Engineer"],
+    tier: "leadership",
+    image: "/team/shivanshi-tripathi.png",
+    imageAlt: "Portrait of Shivanshi Tripathi, Co-founder of Cogerphere AI Labs",
+    shortBio:
+      "Co-founder and AI researcher at Cogerphere. Builds backend microservices, AI pipelines, and core systems across Openbentt, Meridian 0.1, and Clox.",
+    focus: "Backend microservices, AI pipelines, context engineering, and local model research",
+    isResearcher: true,
+    sortOrder: 2,
+    email: "shivanshi048@gmail.com",
+    location: "Lucknow, India",
+    affiliations: [
+      "Cogerphere AI Labs",
+      "Maharishi University of Information Technology (MUIT)",
+      "IBM AI Engineering Professional Certificate",
+    ],
+    resumeUrl: "/team/shivanshi-tripathi-resume.pdf",
+    about: [
+      "Shivanshi Tripathi is Co-founder, AI Researcher, and Backend Microservices Developer at Cogerphere AI Labs in Lucknow, India. She builds the backend systems, AI pipelines, and production infrastructure that power Cogerphere's research products — from Openbentt and Meridian 0.1 to Clox.",
+      "Her work spans scalable microservices with Node.js and PostgreSQL, real-time systems over WebSockets, LLM integration and fine-tuning pipelines, and context engineering to improve retrieval quality and model behavior. She has contributed directly to Meridian 0.1 research — including AI architecture, evaluation methodologies, reasoning systems, and local deployment for researchers.",
+      "Shivanshi is pursuing a Bachelor of Computer Applications (BCA) in AI & Computer Science at Maharishi University of Information Technology and holds an IBM AI Engineering Professional Certificate covering machine learning, deep learning, and AI systems. She works closely with co-founder Yuvraj Pandey across product engineering, research execution, and shipping production-grade applications on AWS.",
+      "Outside Cogerphere, Shivanshi is a selected participant in the Smart India Hackathon, an active member of Lucknow DAO and Lucknow AI Labs, and a contributor to open-source AI research tooling through Openbentt.",
+    ],
+    researchInterests: [
+      "Meridian 0.1 — local research models for LaTeX, thesis drafting, and proofreading",
+      "Context engineering for retrieval quality and response relevance",
+      "LLM fine-tuning, evaluation methodologies, and reasoning systems",
+      "Local deployment of lightweight models on smaller GPUs and devices",
+      "Backend microservices and real-time AI pipeline architecture",
+      "Web-grounded knowledge access for academic writing workflows",
+      "Agentic harness design and secure AI code generation (Clox)",
+    ],
+    skillGroups: [
+      {
+        category: "Languages & core programming",
+        description:
+          "Python, Java, JavaScript, and TypeScript — including Python expertise in file handling, networking, database integration, NumPy, Pandas, Matplotlib, and Scikit-learn for data-driven AI workflows.",
+      },
+      {
+        category: "Backend & microservices",
+        description:
+          "Node.js, Express, REST APIs, WebSockets, Prisma, and PostgreSQL/MongoDB/MySQL for scalable backend systems. Builds modular, production-ready services with optimized database handling and real-time data streaming.",
+      },
+      {
+        category: "AI, ML & LLM systems",
+        description:
+          "Machine learning, supervised and unsupervised learning, classification, clustering, linear and logistic regression, reinforcement learning, LLM integration, fine-tuning, and intelligent automation pipelines for AI-driven products.",
+      },
+      {
+        category: "Context engineering & research AI",
+        description:
+          "Context engineering to improve retrieval quality, response relevance, and model behavior inside research platforms. Contributed to Meridian 0.1 architecture, evaluation design, and local inference workflows for academic use.",
+      },
+      {
+        category: "Frontend & mobile",
+        description:
+          "React and React Native for product interfaces and cross-surface development alongside backend integration and AI workflow design.",
+      },
+      {
+        category: "Cloud, tooling & deployment",
+        description:
+          "AWS deployment, Git, Postman, and production application delivery — emphasizing scalability, modular design, and performance across Cogerphere's product stack.",
+      },
+    ],
+    experience: [
+      {
+        title: "Co-Founder, AI Researcher & Backend Microservices Developer",
+        organization: "Cogerphere AI Labs",
+        period: "6 months – Present",
+        location: "Lucknow, India",
+        highlights: [
+          "Develop scalable backend microservices using Node.js, Express, and PostgreSQL for AI-driven systems.",
+          "Engineer AI pipelines leveraging LLMs, fine-tuning, and intelligent automation workflows.",
+          "Build real-time systems using WebSockets for efficient data streaming and communication.",
+          "Deploy production-ready applications on AWS with optimized database handling using Prisma and MongoDB.",
+          "Contribute to Meridian 0.1 research — AI architecture, evaluation methodologies, reasoning systems, and local deployment.",
+          "Collaborate on multiple production applications emphasizing scalability, modular design, and performance.",
+        ],
+      },
+    ],
+    education: [
+      {
+        institution: "Maharishi University of Information Technology (MUIT)",
+        degree: "Bachelor of Computer Applications (BCA) in AI & Computer Science — GPA 8.5",
+        period: "2024 – 2027",
+        location: "Lucknow, India",
+      },
+      {
+        institution: "IBM",
+        degree: "AI Engineering Professional Certificate",
+        period: "Completed",
+        location: "Online",
+      },
+    ],
+    currentWork: [
+      {
+        title: "Meridian 0.1 research",
+        paragraphs: [
+          "Shivanshi contributes to the research and development of Meridian 0.1 — Cogerphere's lightweight local research model designed to run efficiently on smaller GPUs and devices. Her work focuses on AI architecture, evaluation methodologies, reasoning systems, and deployment patterns that keep inference local and researcher-controlled.",
+          "She supports capabilities for LaTeX writing, thesis drafting, proofreading, and research assistance — including web-grounded knowledge access and improved academic writing workflows inside the model stack.",
+        ],
+        href: "/research#meridian",
+        linkLabel: "Meridian research preview",
+      },
+      {
+        title: "Backend microservices & AI pipelines",
+        paragraphs: [
+          "At Cogerphere, Shivanshi leads backend engineering for AI-driven products — building scalable microservices, real-time WebSocket systems, and production pipelines that connect LLM providers, local GGUF models, and application layers across Openbentt and related systems.",
+          "This infrastructure work ensures Cogerphere's research tools remain fast, modular, and deployable on AWS with reliable database and streaming layers underneath the AI experience.",
+        ],
+      },
+      {
+        title: "Context engineering",
+        paragraphs: [
+          "Shivanshi works on context engineering inside Openbentt and related platforms — improving how models retrieve, reason over, and respond to research context. The goal is higher retrieval quality, more relevant responses, and more predictable model behavior in long-running research sessions.",
+        ],
+      },
+    ],
+    projects: [
+      {
+        name: "Openbentt",
+        paragraphs: [
+          "Shivanshi contributed to the creation and development of Openbentt — Cogerphere's AI-powered research and knowledge intelligence platform. She helped integrate AI models, local GGUF models, and API-based model access into the application stack, and worked on context engineering and scalable AI workflow architecture alongside the founding team.",
+        ],
+        href: "https://openbentt.cogerphere.com/",
+        external: true,
+        linkLabel: "openbentt.cogerphere.com",
+      },
+      {
+        name: "Clox",
+        paragraphs: [
+          "Built an AI-powered platform to generate production-ready smart contracts from natural language inputs — with automated security checks, fail-safe architecture, and deployment across Ethereum, Polygon, and Base networks. Designed intelligent prompt pipelines for optimized and secure code generation.",
+        ],
+        href: "https://cogy01.vercel.app/",
+        external: true,
+        linkLabel: "Visit Clox",
+      },
+      {
+        name: "Meridian 0.1",
+        paragraphs: [
+          "Contributed to Meridian 0.1 as a research model initiative — focusing on local deployment, academic writing support, and evaluation workflows that help researchers run capable AI on their own hardware without sacrificing privacy or control.",
+        ],
+        href: "/research#meridian",
+        linkLabel: "Learn more about Meridian",
+      },
+    ],
+    collaborators: [
+      {
+        name: "Yuvraj Pandey",
+        role: "Founder & CEO",
+        slug: "yuvraj-pandey",
+      },
+    ],
+    links: [
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/shivanshi-tripathi-1b7771307/",
+        external: true,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/Shivanshi913",
+        external: true,
+      },
+      {
+        label: "X (Twitter)",
+        href: "https://x.com/Shivans7521808",
+        external: true,
+      },
+      {
+        label: "Resume (PDF)",
+        href: "/team/shivanshi-tripathi-resume.pdf",
         external: true,
       },
       {

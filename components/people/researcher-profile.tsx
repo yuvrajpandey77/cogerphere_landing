@@ -378,7 +378,16 @@ export function ResearcherProfileView({ profile }: ResearcherProfileViewProps) {
                 <ul className="space-y-4">
                   {profile.collaborators.map((collaborator) => (
                     <li key={collaborator.name} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                      <span className="font-semibold text-stone-950">{collaborator.name}</span>
+                      {collaborator.slug ? (
+                        <Link
+                          href={`/researchers/${collaborator.slug}`}
+                          className="font-semibold text-teal-700 hover:text-teal-800 transition-colors"
+                        >
+                          {collaborator.name}
+                        </Link>
+                      ) : (
+                        <span className="font-semibold text-stone-950">{collaborator.name}</span>
+                      )}
                       <span className="text-sm text-stone-600">{collaborator.role}</span>
                     </li>
                   ))}
