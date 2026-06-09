@@ -43,7 +43,7 @@ export function PersonCard({ person, href, showResearchLink = false }: PersonCar
 
       {showResearchLink && person.isResearcher && profileHref && (
         <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-700">
-          View research profile
+          View profile
           <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>
       )}
