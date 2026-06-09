@@ -135,6 +135,12 @@ export const LandingFooter = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/people" className="hover:text-white transition-colors duration-200 flex items-center group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">People</span>
+                  <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
                 <Link href="/research" className="hover:text-white transition-colors duration-200 flex items-center group">
                   <span className="group-hover:translate-x-1 transition-transform duration-200">Research</span>
                   <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
