@@ -25,6 +25,12 @@ export const SITELINK_PAGES = [
       "Cogerphere AI Labs — mission, Openbentt, Meridian, and how we build human-aligned systems.",
   },
   {
+    name: "People",
+    path: "/people",
+    description:
+      "Meet the Cogerphere team — leadership, engineers, and researchers building local-first AI systems.",
+  },
+  {
     name: "Careers",
     path: "/careers",
     description: "Join Cogerphere AI Labs and help expand the sphere of intelligent systems.",
