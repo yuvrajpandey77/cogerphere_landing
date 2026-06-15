@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 const TITLE = "People";
 const DESCRIPTION =
-  "Meet the Cogerphere team — leadership, engineers, and researchers building local-first AI systems, Openbentt, Meridian, and the Context Intelligence Framework.";
+  "Meet the Cogerphere team — leadership, engineers, and researchers building Cobentt, Openbentt, RRbench, Meridian, and the Context Intelligence Framework.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

@@ -29,7 +29,7 @@ export default function NewsPage() {
               News & Updates
             </h1>
             <p className="text-xl text-stone-600 max-w-2xl">
-              Announcements, product launches, and research from Cogerphere — including Openbentt and our upcoming Meridian 0.1 model.{" "}
+              Announcements, product launches, and research from Cogerphere — including Cobentt, Openbentt, RRbench, and our upcoming Meridian 0.1 model.{" "}
               <Link href="/blog" className="text-teal-700 hover:underline font-medium">
                 Read the blog
               </Link>{" "}
@@ -96,7 +96,7 @@ export default function NewsPage() {
                   Follow our research
                 </p>
                 <p className="text-lg text-white/90">
-                  Updates on Openbentt, Meridian, and CIF land here first — and on{" "}
+                  Updates on Cobentt, Openbentt, RRbench, Meridian, and CIF land here first — and on{" "}
                   <a
                     href="https://x.com/cogerphere"
                     target="_blank"

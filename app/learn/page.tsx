@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ChevronRight, BookOpen, Code, Lightbulb, Laptop } from "lucide-react";
-import { OPENBENTT_URL } from "@/lib/site-content";
+import { ChevronRight, BookOpen, Code, Lightbulb, Laptop, Smartphone } from "lucide-react";
+import { OPENBENTT_URL, COBENTT_URL } from "@/lib/site-content";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
 
@@ -29,7 +29,25 @@ export default function LearnPage() {
 
       {/* Cards */}
       <section className="py-16 md:py-20">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a
+              href={COBENTT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all group"
+            >
+              <div className="w-14 h-14 rounded-xl bg-stone-900 flex items-center justify-center mb-6 group-hover:bg-stone-800 transition-colors">
+                <Smartphone className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-stone-950 mb-2">Cobentt</h3>
+              <p className="text-stone-600 mb-4">
+                Mobile AI chat — install from Safari or Chrome, connect your own model credentials, chat with hundreds of models on your phone.
+              </p>
+              <span className="text-teal-700 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Open Cobentt <ChevronRight className="h-4 w-4" />
+              </span>
+            </a>
+
             <a
               href={OPENBENTT_URL}
               target="_blank"
@@ -57,7 +75,7 @@ export default function LearnPage() {
               </div>
               <h3 className="text-xl font-semibold text-stone-950 mb-2">Documentation</h3>
               <p className="text-stone-600 mb-4">
-                Get started with Openbentt, Clox, Meridian, and CIF SDK. Quick start guides and references.
+                Get started with Cobentt, Openbentt, Clox, Meridian, and CIF SDK. Quick start guides and references.
               </p>
               <span className="text-teal-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 View docs <ChevronRight className="h-4 w-4" />
@@ -89,7 +107,7 @@ export default function LearnPage() {
               </div>
               <h3 className="text-xl font-semibold text-stone-950 mb-2">Research</h3>
               <p className="text-stone-600 mb-4">
-                Context Intelligence Framework and beyond. How we extend what LLMs can remember.
+                Context Intelligence Framework, RRbench, and beyond. How we extend what LLMs can remember and verify research trust.
               </p>
               <span className="text-teal-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Explore research <ChevronRight className="h-4 w-4" />

@@ -23,7 +23,7 @@ const organizationSchema = {
   },
   image: DEFAULT_OG_IMAGE,
   description:
-    "Cogerphere is an AI research lab building Openbentt, Meridian local research AI, the Context Intelligence Framework, and Clox smart contracts.",
+    "Cogerphere is an AI research lab building Openbentt, Cobentt mobile AI chat, RRbench research verification, Meridian local research AI, the Context Intelligence Framework, and Clox smart contracts.",
   foundingDate: "2025",
   email: CONTACT_EMAIL,
   sameAs: [

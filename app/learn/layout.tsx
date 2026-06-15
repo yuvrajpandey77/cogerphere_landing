@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 const TITLE = "Learn";
 const DESCRIPTION =
-  "Learn with Cogerphere — tutorials and guides for Openbentt, Clox, Meridian, and intelligent systems.";
+  "Learn with Cogerphere — tutorials and guides for Cobentt, Openbentt, Clox, Meridian, and intelligent systems.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

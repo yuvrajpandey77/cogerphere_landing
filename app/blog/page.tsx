@@ -42,14 +42,29 @@ export default function BlogPage() {
                   className="block rounded-2xl border border-stone-200 bg-white overflow-hidden hover:border-stone-300 hover:shadow-lg transition-all group"
                 >
                   <div className="grid md:grid-cols-5 gap-0">
-                    <div className="md:col-span-2 relative aspect-[16/10] md:aspect-auto md:min-h-[240px] bg-stone-900">
-                      <Image
-                        src={post.heroImage}
-                        alt={post.heroImageAlt}
-                        fill
-                        className="object-cover object-center"
-                        sizes="(max-width: 768px) 100vw, 40vw"
-                      />
+                    <div
+                      className={`md:col-span-2 relative aspect-[16/10] md:aspect-auto md:min-h-[240px] flex items-center justify-center ${
+                        post.slug === "cobentt-launch" ? "bg-white p-8 md:p-10" : "bg-stone-900"
+                      }`}
+                    >
+                      {post.slug === "cobentt-launch" ? (
+                        <Image
+                          src={post.heroImage}
+                          alt={post.heroImageAlt}
+                          width={256}
+                          height={256}
+                          className="object-contain max-h-[180px] md:max-h-[200px] w-auto h-auto"
+                          sizes="256px"
+                        />
+                      ) : (
+                        <Image
+                          src={post.heroImage}
+                          alt={post.heroImageAlt}
+                          fill
+                          className="object-cover object-center"
+                          sizes="(max-width: 768px) 100vw, 40vw"
+                        />
+                      )}
                     </div>
                     <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-center">
                       <div className="flex flex-wrap items-center gap-3 mb-3">

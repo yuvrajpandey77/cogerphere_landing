@@ -16,13 +16,13 @@ export const SITELINK_PAGES = [
     name: "Research",
     path: "/research",
     description:
-      "Context Intelligence Framework, Meridian 0.1, and applied AI research from Cogerphere.",
+      "Context Intelligence Framework, RRbench, Meridian 0.1, and applied AI research from Cogerphere.",
   },
   {
     name: "About",
     path: "/about",
     description:
-      "Cogerphere AI Labs — mission, Openbentt, Meridian, and how we build human-aligned systems.",
+      "Cogerphere AI Labs — mission, Openbentt, Cobentt, RRbench, Meridian, and how we build human-aligned systems.",
   },
   {
     name: "People",
@@ -39,13 +39,13 @@ export const SITELINK_PAGES = [
     name: "Documentation",
     path: "/docs",
     description:
-      "Documentation for Openbentt, Clox, Meridian, and the Context Intelligence Framework.",
+      "Documentation for Openbentt, Cobentt, RRbench, Clox, Meridian, and the Context Intelligence Framework.",
   },
   {
     name: "News",
     path: "/news",
     description:
-      "Announcements and updates — Openbentt Phase 1, Meridian 0.1, CIF research, and product news.",
+      "Announcements and updates — Cobentt mobile chat, RRbench, Openbentt Phase 1, Meridian 0.1, CIF research, and product news.",
   },
   {
     name: "Contact",
@@ -56,7 +56,7 @@ export const SITELINK_PAGES = [
   {
     name: "Learn",
     path: "/learn",
-    description: "Tutorials and guides for Openbentt, Clox, research tools, and intelligent systems.",
+    description: "Tutorials and guides for Openbentt, Cobentt, Clox, research tools, and intelligent systems.",
   },
 ] as const;
 

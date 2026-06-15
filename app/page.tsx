@@ -6,12 +6,12 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Home",
   description:
-    "Cogerphere AI research lab — Openbentt local-first research workspace, Meridian 0.1 on-device AI, Context Intelligence Framework, and Clox smart contracts.",
+    "Cogerphere AI research lab — Cobentt mobile AI chat, Openbentt local-first research workspace, RRbench research verification, Meridian 0.1 on-device AI, Context Intelligence Framework, and Clox smart contracts.",
   path: "/",
   openGraphTitle: "Home | Cogerphere AI Labs",
 });
-import { ChevronRight, Shield, Zap, Globe, FlaskConical, Eye, Heart, BookOpen, Laptop, FileText, Cpu } from "lucide-react";
-import { OPENBENTT_URL } from "@/lib/site-content";
+import { ChevronRight, Shield, Zap, Globe, FlaskConical, Eye, Heart, BookOpen, Laptop, FileText, Cpu, Smartphone, MessageSquare, Key, Scale } from "lucide-react";
+import { OPENBENTT_URL, COBENTT_URL, COBENTT_INSTALL_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -37,7 +37,7 @@ export default function HomePage() {
               Where intelligence moves and knowledge gathers
             </h1>
             <p className="text-xl md:text-2xl text-stone-600 max-w-2xl leading-relaxed">
-              We expand the sphere of what systems can understand and uphold — from local-first research tools like Openbentt to context-aware LLMs, on-device models, and secure smart contracts.
+              We expand the sphere of what systems can understand and uphold — from Cobentt mobile AI chat and local-first research tools like Openbentt to context-aware LLMs, on-device models, and secure smart contracts.
             </p>
           </section>
 
@@ -91,12 +91,29 @@ export default function HomePage() {
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <a
-                href={OPENBENTT_URL}
+                href={COBENTT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group"
               >
                 <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Product · New</span>
+                <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
+                  Cobentt
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Mobile AI chat on your phone. Install from the browser — your credentials and history stay on your device.
+                </p>
+                <span className="inline-flex items-center gap-1 text-teal-700 font-medium mt-4 text-sm">
+                  Open Cobentt <ChevronRight className="h-4 w-4" />
+                </span>
+              </a>
+              <a
+                href={OPENBENTT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group"
+              >
+                <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Product</span>
                 <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
                   Openbentt Phase 1
                 </h3>
@@ -107,25 +124,13 @@ export default function HomePage() {
                   Get Openbentt <ChevronRight className="h-4 w-4" />
                 </span>
               </a>
-              <Link href="/research#meridian" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
-                <span className="text-xs font-semibold text-teal-700 uppercase tracking-wider">Model · Upcoming</span>
-                <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
-                  Meridian 0.1
-                </h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
-                  Our local research AI for proofreading, LaTeX workflows, and research writing — runs entirely on your hardware.
-                </p>
-                <span className="inline-flex items-center gap-1 text-teal-700 font-medium mt-4 text-sm">
-                  Learn more <ChevronRight className="h-4 w-4" />
-                </span>
-              </Link>
               <Link href="/news" className="rounded-2xl border border-stone-200 bg-white p-6 hover:border-stone-300 hover:shadow-lg transition-all group">
                 <span className="text-xs font-semibold text-teal-600 uppercase tracking-wider">News</span>
                 <h3 className="text-xl font-semibold text-stone-950 mt-2 mb-2 group-hover:text-teal-700 transition-colors">
                   Updates & announcements
                 </h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
-                  Openbentt launch, Meridian 0.1 preview, CIF research, and more from the lab.
+                  Cobentt launch, RRbench preview, Openbentt Phase 1, Meridian 0.1, CIF research, and more from the lab.
                 </p>
                 <span className="inline-flex items-center gap-1 text-teal-600 font-medium mt-4 text-sm">
                   View news <ChevronRight className="h-4 w-4" />
@@ -178,6 +183,80 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+            </div>
+          </section>
+
+          {/* Product — Cobentt */}
+          <section className="pt-20 md:pt-24 pb-12 md:pb-16">
+            <div className="bg-white rounded-2xl border border-stone-200 p-10 md:p-14 overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div>
+                  <span className="inline-block px-4 py-2 bg-stone-900 text-white rounded-full text-sm font-semibold mb-6">
+                    Cobentt
+                  </span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal mb-6 text-stone-950 tracking-tight">
+                    Mobile AI chat by Cogerphere
+                  </h2>
+                  <p className="text-xl text-stone-600 mb-8 leading-relaxed">
+                    Chat with hundreds of models from your phone or browser. Cobentt installs like a native app — no App Store, no account with us. Your model credentials and chat history stay on your device.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      asChild
+                      className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl font-bold text-base px-8 py-3.5"
+                    >
+                      <a href={COBENTT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        Open Cobentt <ChevronRight className="h-5 w-5" />
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="rounded-xl border-2 border-stone-300 text-stone-800 hover:bg-stone-100 font-semibold px-6 py-3.5"
+                    >
+                      <a href={COBENTT_INSTALL_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        Install on mobile <ChevronRight className="h-5 w-5" />
+                      </a>
+                    </Button>
+                  </div>
+                  <p className="text-sm text-stone-500 mt-4">
+                    Need the full research workspace?{" "}
+                    <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="text-teal-700 font-medium hover:underline">
+                      See Openbentt for desktop
+                    </a>
+                    .
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center shrink-0">
+                      <Smartphone className="h-6 w-6 text-stone-700" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Install from the browser</h3>
+                      <p className="text-stone-600 text-sm">Add to Home Screen on iOS Safari or Install app in Chrome/Edge on Android — full-screen PWA, no APK or IPA.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center shrink-0">
+                      <Key className="h-6 w-6 text-stone-700" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Harness your own model access</h3>
+                      <p className="text-stone-600 text-sm">Connect your own inference credentials. Credentials and chat history live in localStorage on your device — same privacy model as Openbentt.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center shrink-0">
+                      <MessageSquare className="h-6 w-6 text-stone-700" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-stone-950 mb-1">Streaming · compare · attachments</h3>
+                      <p className="text-stone-600 text-sm">Multi-model compare, file attachments, local history, dark UI, and free-tier cloud models supported.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -298,7 +377,20 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-serif font-normal text-stone-950 mb-8">
               From the lab
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="rounded-2xl border border-stone-200 bg-white p-8">
+                <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
+                  <Scale className="h-6 w-6 text-amber-800" />
+                </div>
+                <span className="text-xs font-semibold text-amber-800 uppercase tracking-wider">Upcoming</span>
+                <h3 className="text-xl font-semibold text-stone-950 mb-2 mt-1">RRbench</h3>
+                <p className="text-stone-600 text-sm leading-relaxed mb-4">
+                  ResearchBench — trust-first verification for scientific credibility and reproducibility, with transparent 0–100 Trust Scores backed by AI, artifacts, experts, and community.
+                </p>
+                <Link href={RRBENCH_BLOG_PATH} className="text-teal-700 font-medium text-sm hover:underline">
+                  Read the preview →
+                </Link>
+              </div>
               <div className="rounded-2xl border border-stone-200 bg-white p-8">
                 <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center mb-4">
                   <Cpu className="h-6 w-6 text-teal-700" />

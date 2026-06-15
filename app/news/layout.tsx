@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 const TITLE = "News";
 const DESCRIPTION =
-  "Cogerphere news: Openbentt Phase 1, Meridian 0.1 preview, CIF research, and product announcements.";
+  "Cogerphere news: Cobentt mobile chat, RRbench research verification, Openbentt Phase 1, Meridian 0.1 preview, CIF research, and product announcements.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

@@ -9,7 +9,7 @@ import {
   Send, CheckCircle2, AlertCircle,
   Briefcase, Building2, FlaskConical, Handshake, Newspaper, Shield, HelpCircle
 } from 'lucide-react';
-import { OPENBENTT_URL } from '@/lib/site-content';
+import { OPENBENTT_URL, COBENTT_URL } from '@/lib/site-content';
 import { cn } from '@/lib/utils';
 
 const CONTACT_EMAIL = "cogerphereailabs@gmail.com";
@@ -216,6 +216,11 @@ export default function ContactPage() {
                 Research workspace?{" "}
                 <a href={OPENBENTT_URL} target="_blank" rel="noopener noreferrer" className="text-teal-600 font-medium hover:underline">
                   Get Openbentt
+                </a>
+                <br />
+                Mobile AI chat?{" "}
+                <a href={COBENTT_URL} target="_blank" rel="noopener noreferrer" className="text-teal-600 font-medium hover:underline">
+                  Open Cobentt
                 </a>
                 <br />
                 Need Clox? <Link href="https://cogy01.vercel.app/" className="text-teal-600 font-medium hover:underline">Try Clox</Link>

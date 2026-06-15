@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ChevronRight, Cpu, AlertTriangle, Zap, Gauge, FileText, Shield, Sparkles, FlaskConical } from "lucide-react";
-import { OPENBENTT_URL } from "@/lib/site-content";
+import { ChevronRight, Cpu, AlertTriangle, Zap, Gauge, FileText, Shield, Sparkles, FlaskConical, Scale, Users, Lock } from "lucide-react";
+import { OPENBENTT_URL, RRBENCH_GITHUB_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -91,6 +91,80 @@ export default function ResearchPage() {
             <strong className="text-stone-950">Status:</strong> Meridian 0.1 is in active development. Follow{" "}
             <Link href="/news" className="text-teal-700 hover:underline">News</Link> for launch updates.
           </p>
+      </section>
+
+      {/* RRbench (ResearchBench) */}
+      <section id="rrbench" className="py-16 md:py-20 scroll-mt-24">
+          <span className="inline-block px-4 py-2 bg-amber-100 text-amber-900 rounded-full text-sm font-semibold mb-6">
+            Upcoming · Research verification
+          </span>
+          <h2 className="text-3xl md:text-4xl font-serif font-normal mb-4 text-stone-950">
+            RRbench <span className="text-stone-500 font-sans text-2xl md:text-3xl">(ResearchBench)</span>
+          </h2>
+          <p className="text-sm font-semibold text-amber-800 uppercase tracking-wider mb-6">
+            Verdict: Promising · Early phase
+          </p>
+          <p className="text-lg text-stone-600 mb-12 max-w-3xl leading-relaxed">
+            RRbench is a trust-first research verification platform — a unified, transparent, verifiable system for assessing credibility and reproducibility of scientific research, especially AI/ML papers and complex models. Traditional signals like citations and journal reputation are insufficient for modern AI-driven science.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <Sparkles className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">AI agents</h3>
+                <p className="text-stone-600 text-sm">Claim extraction, evidence evaluation, and verdict synthesis across papers and artifacts.</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <Lock className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">Artifact integrity</h3>
+                <p className="text-stone-600 text-sm">SHA-256 verification, immutable audit logs, and cryptographic checks on research artifacts.</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
+                <Users className="h-6 w-6 text-teal-700" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">Expert + community</h3>
+                <p className="text-stone-600 text-sm">Threaded reviews, professor and admin workflows, and community validation layers.</p>
+              </div>
+            </div>
+            <div className="rounded-2xl p-6 bg-white border border-stone-200 flex gap-4">
+              <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center shrink-0">
+                <Scale className="h-6 w-6 text-amber-800" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-950 mb-2">Trust Score</h3>
+                <p className="text-stone-600 text-sm">Transparent, evidence-backed 0–100 scores combining every signal — not citations alone.</p>
+              </div>
+            </div>
+          </div>
+          <p className="mt-8 text-stone-600 max-w-3xl mb-8">
+            <strong className="text-stone-950">Built for:</strong> AI/ML researchers and institutions who need faster, clearer credibility assessment beyond traditional metrics.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button asChild className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl">
+              <Link href={RRBENCH_BLOG_PATH} className="flex items-center gap-2">
+                Read the preview <ChevronRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="rounded-xl border-2 border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white">
+              <a href={RRBENCH_GITHUB_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                View on GitHub <ChevronRight className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button asChild variant="outline" className="rounded-xl border-2 border-stone-300 text-stone-800 hover:bg-stone-100">
+              <Link href="/news" className="flex items-center gap-2">
+                Follow updates <ChevronRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
       </section>
 
       {/* The Problem */}

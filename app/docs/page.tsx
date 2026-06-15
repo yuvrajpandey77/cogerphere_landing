@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ChevronRight, BookOpen, Code, Wrench, Laptop, Cpu } from "lucide-react";
-import { OPENBENTT_URL } from "@/lib/site-content";
+import { ChevronRight, BookOpen, Code, Wrench, Laptop, Cpu, Smartphone, Scale } from "lucide-react";
+import { OPENBENTT_URL, COBENTT_URL, COBENTT_INSTALL_URL, RRBENCH_GITHUB_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
 import { Button } from "@/components/ui/button";
 import { LandingHeader } from "@/components/layout/landing-header";
 import { LandingFooter } from "@/components/layout/landing-footer";
@@ -24,7 +24,7 @@ export default function DocsPage() {
             Documentation
           </h1>
           <p className="text-xl md:text-2xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
-            Build intelligent systems with Cogerphere. Openbentt for local research, Meridian for on-device writing, Clox for smart contracts, and CIF for context-aware LLMs.
+            Build intelligent systems with Cogerphere. Cobentt for mobile AI chat, Openbentt for local research, RRbench for research verification, Meridian for on-device writing, Clox for smart contracts, and CIF for context-aware LLMs.
           </p>
       </section>
 
@@ -37,22 +37,29 @@ export default function DocsPage() {
             <li className="flex gap-4 items-start">
               <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">1</span>
               <div>
+                <h3 className="font-semibold text-stone-950">Install Cobentt on mobile</h3>
+                <p className="text-stone-600">Open Cobentt in Safari or Chrome, add to your home screen, and connect your own model access for hundreds of models.</p>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">2</span>
+              <div>
                 <h3 className="font-semibold text-stone-950">Get Openbentt</h3>
                 <p className="text-stone-600">Download the local-first research workspace for LaTeX, PDFs, and on-device AI.</p>
               </div>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">2</span>
+              <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">3</span>
               <div>
                 <h3 className="font-semibold text-stone-950">Try Clox</h3>
                 <p className="text-stone-600">Generate your first production-ready smart contract from natural language.</p>
               </div>
             </li>
             <li className="flex gap-4 items-start">
-              <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">3</span>
+              <span className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold shrink-0">4</span>
               <div>
                 <h3 className="font-semibold text-stone-950">Explore research</h3>
-                <p className="text-stone-600">Read about Meridian 0.1, CIF, and what we&apos;re building next.</p>
+                <p className="text-stone-600">Read about RRbench, Meridian 0.1, CIF, and what we&apos;re building next.</p>
               </div>
             </li>
           </ol>
@@ -64,6 +71,29 @@ export default function DocsPage() {
             Products & Tools
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Cobentt */}
+            <div className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all">
+              <div className="w-14 h-14 rounded-xl bg-stone-900 flex items-center justify-center mb-6">
+                <Smartphone className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-stone-950 mb-2">Cobentt</h3>
+              <p className="text-stone-600 mb-6">
+                Mobile AI chat PWA — hundreds of models on your phone. Install from the browser, connect your own credentials, no App Store or Cogerphere account.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl">
+                  <a href={COBENTT_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    Open Cobentt <ChevronRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="rounded-xl border-2 border-stone-300">
+                  <a href={COBENTT_INSTALL_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    Install guide <ChevronRight className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+
             {/* Openbentt */}
             <div className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all">
               <div className="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center mb-6">
@@ -78,6 +108,35 @@ export default function DocsPage() {
                   Get Openbentt <ChevronRight className="h-4 w-4" />
                 </a>
               </Button>
+            </div>
+
+            {/* RRbench */}
+            <div className="rounded-2xl border border-stone-200 p-8 bg-white hover:border-stone-300 hover:shadow-lg transition-all">
+              <div className="w-14 h-14 rounded-xl bg-amber-100 flex items-center justify-center mb-6">
+                <Scale className="h-7 w-7 text-amber-800" />
+              </div>
+              <h3 className="text-xl font-semibold text-stone-950 mb-2">RRbench (ResearchBench)</h3>
+              <p className="text-stone-600 mb-6">
+                Trust-first research verification — multi-signal Trust Scores for credibility and reproducibility of AI/ML papers and complex models. AI analysis, artifact integrity, expert and community review.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild className="bg-teal-600 text-white hover:bg-teal-700 rounded-xl">
+                  <Link href={RRBENCH_BLOG_PATH} className="flex items-center gap-2">
+                    Read preview <ChevronRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="rounded-xl border-2 border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white">
+                  <Link href="/research#rrbench" className="flex items-center gap-2">
+                    Research page <ChevronRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="rounded-xl border-2 border-stone-300">
+                  <a href={RRBENCH_GITHUB_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    GitHub <ChevronRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <span className="text-sm text-stone-500 self-center">Upcoming</span>
+              </div>
             </div>
 
             {/* Meridian */}

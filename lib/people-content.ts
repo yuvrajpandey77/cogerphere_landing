@@ -245,6 +245,16 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
     ],
     projects: [
       {
+        name: "Cobentt",
+        paragraphs: [
+          "Cobentt is Cogerphere's mobile AI chat PWA — hundreds of models on your phone with the same local-first privacy model as Openbentt. Users install from the browser (Add to Home Screen / Install app), harness their own model access, and chat without an App Store download or Cogerphere account.",
+          "Built on the shared Openbentt codebase, Cobentt targets streaming chat, multi-model compare, attachments, and local history in a dark mobile UI.",
+        ],
+        href: "https://openbentt.vercel.app/chat",
+        external: true,
+        linkLabel: "Open Cobentt",
+      },
+      {
         name: "Openbentt",
         paragraphs: [
           "Openbentt is Cogerphere's flagship local-first AI workspace — architected and led by Yuvraj from the ground up, with core engineering alongside co-founder Shivanshi Tripathi. It supports PDF analysis, document intelligence, LaTeX editing, AI-assisted writing, model benchmarking, fine-tuning, and multi-provider experimentation without requiring cloud accounts or sending research data off-machine.",
@@ -301,6 +311,11 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
       {
         label: "Cogerphere Research",
         href: "/research",
+      },
+      {
+        label: "Cobentt",
+        href: "https://openbentt.vercel.app/chat",
+        external: true,
       },
       {
         label: "Openbentt",
@@ -432,6 +447,15 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
     ],
     projects: [
       {
+        name: "Cobentt",
+        paragraphs: [
+          "Shivanshi contributed to Cobentt — Cogerphere's mobile AI chat PWA built on the shared Openbentt stack. The product brings streaming chat, multi-model compare, and local credential storage to iOS and Android via browser install, with the same privacy model as the desktop workspace.",
+        ],
+        href: "https://openbentt.vercel.app/chat",
+        external: true,
+        linkLabel: "Open Cobentt",
+      },
+      {
         name: "Openbentt",
         paragraphs: [
           "Shivanshi contributed to the creation and development of Openbentt — Cogerphere's AI-powered research and knowledge intelligence platform. She helped integrate AI models, local GGUF models, and API-based model access into the application stack, and worked on context engineering and scalable AI workflow architecture alongside the founding team.",
@@ -489,6 +513,11 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
       {
         label: "Cogerphere Research",
         href: "/research",
+      },
+      {
+        label: "Cobentt",
+        href: "https://openbentt.vercel.app/chat",
+        external: true,
       },
       {
         label: "Openbentt",
