@@ -1,3 +1,5 @@
+import { OPENBENTT_URL } from "@/lib/site-content";
+
 export type PersonTier = "leadership" | "engineering" | "research" | "operations";
 
 export type PersonLink = {
@@ -260,7 +262,7 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
           "Openbentt is Cogerphere's flagship local-first AI workspace — architected and led by Yuvraj from the ground up, with core engineering alongside co-founder Shivanshi Tripathi. It supports PDF analysis, document intelligence, LaTeX editing, AI-assisted writing, model benchmarking, fine-tuning, and multi-provider experimentation without requiring cloud accounts or sending research data off-machine.",
           "The product is built around researcher trust: offline-capable workflows, local and cloud AI provider flexibility, and a desktop-oriented architecture optimized for serious technical work rather than generic chatbot interactions.",
         ],
-        href: "https://openbentt.cogerphere.com/",
+        href: OPENBENTT_URL,
         external: true,
         linkLabel: "openbentt.cogerphere.com",
       },
@@ -319,7 +321,7 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
       },
       {
         label: "Openbentt",
-        href: "https://openbentt.cogerphere.com/",
+        href: OPENBENTT_URL,
         external: true,
       },
     ],
@@ -460,7 +462,7 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
         paragraphs: [
           "Shivanshi contributed to the creation and development of Openbentt — Cogerphere's AI-powered research and knowledge intelligence platform. She helped integrate AI models, local GGUF models, and API-based model access into the application stack, and worked on context engineering and scalable AI workflow architecture alongside the founding team.",
         ],
-        href: "https://openbentt.cogerphere.com/",
+        href: OPENBENTT_URL,
         external: true,
         linkLabel: "openbentt.cogerphere.com",
       },
@@ -521,7 +523,7 @@ const researcherProfiles: Record<string, ResearcherProfile> = {
       },
       {
         label: "Openbentt",
-        href: "https://openbentt.cogerphere.com/",
+        href: OPENBENTT_URL,
         external: true,
       },
     ],

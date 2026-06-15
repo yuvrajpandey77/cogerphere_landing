@@ -79,7 +79,7 @@ export const LandingHeader = () => {
                       </div>
                     </Link>
                     <Link
-                      href="https://openbentt.cogerphere.com/"
+                      href={OPENBENTT_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors"
@@ -204,7 +204,7 @@ export const LandingHeader = () => {
                   Cobentt
                 </Link>
                 <Link
-                  href="https://openbentt.cogerphere.com/"
+                  href={OPENBENTT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-stone-600 hover:text-stone-950 transition-colors pl-4 mt-1"
