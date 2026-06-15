@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Cogerphere – AI Research Lab & Intelligent Systems",
     short_name: "Cogerphere",
     description:
-      "Cogerphere builds Openbentt, Meridian local research AI, CIF, and Clox — intelligent systems that stay coherent and human-aligned.",
+      "Cogerphere builds Openbentt, Cobentt, RRbench, Meridian local research AI, CIF, and Clox — intelligent systems that stay coherent and human-aligned.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

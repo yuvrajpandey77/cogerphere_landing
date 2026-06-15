@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Linkedin, Github } from "lucide-react";
+import { COBENTT_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
 
 export const LandingFooter = () => {
   return (
@@ -63,6 +64,17 @@ export const LandingFooter = () => {
             <ul className="space-y-3 text-stone-400">
               <li>
                 <a
+                  href={COBENTT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200 flex items-center group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">Cobentt</span>
+                  <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://openbentt.cogerphere.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -75,6 +87,15 @@ export const LandingFooter = () => {
               <li>
                 <Link href="https://cogy01.vercel.app/" className="hover:text-white transition-colors duration-200 flex items-center group">
                   <span className="group-hover:translate-x-1 transition-transform duration-200">Clox</span>
+                  <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </li>
+              <li>
+                <Link href={RRBENCH_BLOG_PATH} className="hover:text-white transition-colors duration-200 flex items-center group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">
+                    RRbench
+                    <span className="ml-1.5 text-[10px] font-semibold uppercase text-amber-400/90">Upcoming</span>
+                  </span>
                   <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </li>

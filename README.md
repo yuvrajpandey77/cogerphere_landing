@@ -4,7 +4,9 @@ Marketing site for **Cogerphere AI Labs** — built with Next.js 16, React 19, T
 
 ## Products & research
 
+- **[Cobentt](https://openbentt.vercel.app/chat)** — Mobile AI chat PWA (install from browser, credentials stay local)
 - **[Openbentt](https://openbentt.cogerphere.com/)** — Local-first AI workspace for LaTeX, PDFs, and on-device research (Phase 1)
+- **[RRbench](https://github.com/COGERPHEREAILABS/RRbench)** — Upcoming trust-first research verification platform ([preview](/blog/rrbench-preview))
 - **Meridian 0.1** — Upcoming on-device research model (proofreading, LaTeX, writing)
 - **[Clox](https://cogy01.vercel.app/)** — AI smart contract builder
 - **CIF** — Context Intelligence Framework ([research](/research))

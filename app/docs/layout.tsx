@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 const TITLE = "Documentation";
 const DESCRIPTION =
-  "Cogerphere documentation — Openbentt, Meridian 0.1, Clox smart contracts, CIF SDK, tutorials, and support.";
+  "Cogerphere documentation — Openbentt, Cobentt, RRbench, Meridian 0.1, Clox smart contracts, CIF SDK, tutorials, and support.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

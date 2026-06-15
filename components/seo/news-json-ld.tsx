@@ -12,7 +12,7 @@ export function NewsJsonLd() {
     url: absoluteUrl("/news"),
     name: `News & Updates | ${SITE_LEGAL_NAME}`,
     description:
-      "Cogerphere announcements — Openbentt, Meridian 0.1, Context Intelligence Framework, and product updates.",
+      "Cogerphere announcements — Cobentt, RRbench, Openbentt, Meridian 0.1, Context Intelligence Framework, and product updates.",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     inLanguage: "en-US",

@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 const TITLE = "About";
 const DESCRIPTION =
-  "Cogerphere AI Labs — Intelligence in Motion. Knowledge in a Sphere. Openbentt, Meridian 0.1, and systems that stay coherent.";
+  "Cogerphere AI Labs — Intelligence in Motion. Knowledge in a Sphere. Cobentt, Openbentt, RRbench, Meridian 0.1, and systems that stay coherent.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

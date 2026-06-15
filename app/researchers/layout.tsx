@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 
 const TITLE = "Researchers";
 const DESCRIPTION =
-  "Cogerphere researchers working on context intelligence, local-first AI, Meridian 0.1, and the systems behind Openbentt.";
+  "Cogerphere researchers working on context intelligence, local-first AI, Cobentt, RRbench, Meridian 0.1, and the systems behind Openbentt.";
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,

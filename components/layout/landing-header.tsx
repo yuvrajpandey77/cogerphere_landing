@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronRight, Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { OPENBENTT_URL } from "@/lib/site-content";
+import { OPENBENTT_URL, COBENTT_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
 
 export const LandingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,8 +62,22 @@ export const LandingHeader = () => {
               
               {/* Products Dropdown Menu */}
               {isProductsOpen && (
-                <div className="absolute top-full pt-2 left-1/2 -translate-x-1/2 w-56 z-50">
+                <div className="absolute top-full pt-2 left-1/2 -translate-x-1/2 w-64 z-50">
                   <div className="bg-white rounded-lg shadow-lg border border-stone-200 py-2">
+                    <Link
+                      href={COBENTT_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span>
+                          Cobentt
+                          <span className="ml-1.5 text-[10px] font-semibold uppercase text-teal-600">New</span>
+                        </span>
+                        <ChevronRight className="h-4 w-4 ml-auto" />
+                      </div>
+                    </Link>
                     <Link
                       href="https://openbentt.cogerphere.com/"
                       target="_blank"
@@ -71,10 +85,7 @@ export const LandingHeader = () => {
                       className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors"
                     >
                       <div className="flex items-center gap-2">
-                        <span>
-                          Openbentt
-                          <span className="ml-1.5 text-[10px] font-semibold uppercase text-teal-600">New</span>
-                        </span>
+                        Openbentt
                         <ChevronRight className="h-4 w-4 ml-auto" />
                       </div>
                     </Link>
@@ -84,6 +95,19 @@ export const LandingHeader = () => {
                     >
                       <div className="flex items-center gap-2">
                         Clox
+                        <ChevronRight className="h-4 w-4 ml-auto" />
+                      </div>
+                    </Link>
+                    <div className="my-2 border-t border-stone-100" aria-hidden />
+                    <Link
+                      href={RRBENCH_BLOG_PATH}
+                      className="block px-4 py-2 text-sm text-stone-700 hover:bg-stone-100 transition-colors"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span>
+                          RRbench
+                          <span className="ml-1.5 text-[10px] font-semibold uppercase text-amber-700">Upcoming</span>
+                        </span>
                         <ChevronRight className="h-4 w-4 ml-auto" />
                       </div>
                     </Link>
@@ -171,6 +195,15 @@ export const LandingHeader = () => {
               <div className="flex flex-col">
                 <span className="text-stone-700 font-medium">Products</span>
                 <Link
+                  href={COBENTT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-600 hover:text-stone-950 transition-colors pl-4 mt-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Cobentt
+                </Link>
+                <Link
                   href="https://openbentt.cogerphere.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -185,6 +218,13 @@ export const LandingHeader = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Clox
+                </Link>
+                <Link
+                  href={RRBENCH_BLOG_PATH}
+                  className="text-stone-600 hover:text-stone-950 transition-colors pl-4 mt-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  RRbench <span className="text-xs text-amber-700 font-semibold">(Upcoming)</span>
                 </Link>
               </div>
               <Link href="/learn" className="text-stone-700 hover:text-stone-950 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
