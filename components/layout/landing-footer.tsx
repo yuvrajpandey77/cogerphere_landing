@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Linkedin, Github } from "lucide-react";
-import { COBENTT_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
+import { COBENTT_URL, OPENBENTT_URL, RRBENCH_BLOG_PATH } from "@/lib/site-content";
 
 export const LandingFooter = () => {
   return (
@@ -75,7 +75,7 @@ export const LandingFooter = () => {
               </li>
               <li>
                 <a
-                  href="https://openbentt.cogerphere.com/"
+                  href={OPENBENTT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-200 flex items-center group"

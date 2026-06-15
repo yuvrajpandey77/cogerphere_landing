@@ -1,4 +1,7 @@
-export const OPENBENTT_URL = "https://openbentt.cogerphere.com/";
+export const OPENBENTT_PRIMARY_URL = "https://openbentt.cogerphere.com/";
+export const OPENBENTT_FALLBACK_URL = "https://openbentt.vercel.app/";
+/** All site links — `/go/openbentt` redirects to primary or fallback if down. */
+export const OPENBENTT_URL = "/go/openbentt";
 
 export const COBENTT_URL = "https://openbentt.vercel.app/chat";
 export const COBENTT_INSTALL_URL = "https://openbentt.vercel.app/chat?install=1";
@@ -50,7 +53,7 @@ export const announcements: Announcement[] = [
     excerpt:
       "A local-first AI workspace for LaTeX, PDFs, benchmarking, and fine-tuned small models — built for researchers, by researchers. Inference, history, and attachments stay on your machine.",
     href: OPENBENTT_URL,
-    external: true,
+    external: false,
     badge: "New",
   },
   {
