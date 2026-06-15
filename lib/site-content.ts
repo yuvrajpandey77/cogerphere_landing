@@ -1,5 +1,5 @@
-export const OPENBENTT_PRIMARY_URL = "https://openbentt.cogerphere.com/";
-export const OPENBENTT_FALLBACK_URL = "https://openbentt.vercel.app/";
+export const OPENBENTT_PRIMARY_URL = "https://openbentt.cogerphere.com/download";
+export const OPENBENTT_FALLBACK_URL = "https://openbentt.vercel.app/download";
 /** All site links — `/go/openbentt` redirects to primary or fallback if down. */
 export const OPENBENTT_URL = "/go/openbentt";
 
